@@ -1,0 +1,41 @@
+body {
+	font-size: 16px;
+	font-family: "Open Sans",serif;
+	background: transparent;
+	background-color:#6B747A;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+#logo {
+ padding-left:10px;padding-top:5px;
+}
+#headref{
+ width:35px;height:35px;margin-top:8px;
+}
+#userref{
+ width:55px;height:55px;
+}
+#visref{
+ width:35px;height:35px;
+}
+.status_img {
+width: 460px;
+height: 200px;
+margin-top:3px;
+}
+#footer {
+  font-size: 14px;color:white;text-align: center;
+}
+.cur{
+cursor:pointer;
+}
+.fl{
+float:left;
+}
+.fr{
+float:right;
+}
+.tit{
+background-color:#6B747A;
+}
