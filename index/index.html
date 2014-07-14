@@ -14,6 +14,7 @@
 		<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+	<!--start header-->
 	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner"><!--navbar-default   navbar-inverse-->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		  <div class="container">
@@ -24,8 +25,7 @@
 			   <ul class="nav navbar-nav navbar-right clearfix">
 				<li><img src="../image/add.jpg" id="headref" class="img-circle">&nbsp;&nbsp;</li>
 				<li><img src="../image/headref.jpg" id="headref" class="img-circle">&nbsp;&nbsp; </li>
-				<li><img src="../image/user1.jpg" id="headref" class="img-circle">&nbsp;&nbsp;</li>
-				<li><img src="../image/user2.jpg" id="headref" class="img-circle">&nbsp;</li>
+				<li><img src="../image/qq.png" id="headref" class="img-circle">&nbsp;&nbsp;</li>
                 <!--
 				<li>
 				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">王春磊<span class="caret"></span></a>
@@ -52,106 +52,118 @@
 		  </div>
 		</div>
 	</header>
-	<div class="container" style="margin-top:100px; width:1000px;">
-		<div class="row" >
+	<!--stop header-->
+	<!--start container -->
+	<div class="container" style="margin-top:80px; width:1000px;">
+	    <!--start row-->
+		<div class="row wh" >
+		    <!--start account line-->
 			<div class="col-sm-6 col-md-1">
 					<p><img src="../image/headref.jpg" id="userref" class="img-circle img-thumbnail cur"></p>
-					<p><img src="../image/user1.jpg" id="userref" class="img-circle img-thumbnail cur"></p>
-					<p><img src="../image/user2.jpg" id="userref" class="img-circle img-thumbnail cur"></p>
+					<p><img src="../image/qq.png" id="userref" class="img-circle img-thumbnail cur"></p>
 					<p><img src="../image/add.jpg" id="userref" class="img-circle img-thumbnail cur"></p>
+					<!--nickname-->
 					<!--
 					<p><a href="#"><strong>eq.primos</strong></a></p>
 					-->
 			</div>
+			<!--stop account line-->
+
+			<!--start option list-->
 			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<div class="panel panel-default tit">
-					  <div class="panel-body">
-						KeeeWeee
-					  <span class="caret fr"></span>
-					  </div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">KeeeWeee<a href="#"><span class="caret fr"></span></a></h3>
 					</div>
-					<!--search input -->
-					<!--
-					<div class="panel panel-default tit">
-						<div class="input-group">
-						  <input type="text" class="form-control">
-						  <span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
-						  </span>
+					<div class="panel-body">
+						<ul class="nav nav-pills" role="tablist">
+							<li class="active"><a href="#">消息<span class="badge">12</span></a></li>
+								<li><a href="#">好友<span class="badge">6</span></a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">更多<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">朋友圈</a></li>
+									<li><a href="#">广场</a></li>
+									<li><a href="#">通知</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="list-group mt">
+							<a href="#" class="list-group-item">
+								<img src="../image/user2.jpg" id="visref" class="img-circle">&nbsp;&nbsp;薇薇
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
+							<a href="#" class="list-group-item">
+								<img src="../image/group.jpg" id="visref" class="img-circle">&nbsp;&nbsp;KeeeWeee(北京)
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
+							<a href="#" class="list-group-item">
+								<img src="../image/tianweisong.jpg" id="visref" class="img-circle">&nbsp;&nbsp;田伟松
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
+							<a href="#" class="list-group-item">
+								<img src="../image/maguokai.jpg" id="visref" class="img-circle">&nbsp;&nbsp;马国凯
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
+							<a href="#" class="list-group-item">
+								<img src="../image/xiaozhao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;小招
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
+							<a href="#" class="list-group-item">
+								<img src="../image/huaqiao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;化桥
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
+							<a href="#" class="list-group-item">
+							<img src="../image/tangyuchun.jpg" id="visref" class="img-circle">&nbsp;&nbsp;春春
+								<button type="button" class="close" aria-hidden="true">&times;</button>
+							</a>
 						</div>
 					</div>
-					-->
-					<div class="panel panel-default tit">
-						<ul class="nav nav-pills" role="tablist">
-						  <li class="active"><a href="#">Messages</a></li>
-						  <li><a href="#">Contacts</a></li>
-					      <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">More<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-							  <li><a href="#">Moments</a></li>
-							  <li><a href="#">Discover</a></li>
-							  <li><a href="#">Notifications</a></li>
-							</ul>
-						 </li>
-						</ul>
-					</div>
-				</div>
-			<!--
-					<img class="status_img img-thumbnail" src="../image/status.jpg" >
-					<div class="caption">
-					<h3>Thumbnail label</h3>
-					<p><span class="glyphicon glyphicon-map-marker"><strong>China,Beijing</strong></span></p>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span></button>&nbsp;&nbsp;<a href="#"><strong>eq.primos</strong></a> likes this.</p>
-					<p> Comments: <span class="badge">2</span></p>
-					<p><div class="input-group">
-						 <input type="text" class="form-control" placeholder="leave a comment">
-						 <span class="input-group-btn">
-						  <button class="btn btn-default" type="button">Comment</button>
-						 </span>
-					</div>
-					</p>
-					<p><img src="../image/user1.jpg" id="visref" class="img-circle"><a href="#"><strong> chrisstyle</strong></a>  it's beatiful<button type="button" class="close" aria-hidden="true">&times;</button></p>
-					<p><img src="../image/user2.jpg" id="visref" class="img-circle"><a href="#"><strong> VivianYoung1988</strong></a>  wow!<button type="button" class="close" aria-hidden="true">&times;</button></p>
-					</div>
-					-->
-				
-			</div>
-			<div class="col-sm-6 col-md-7">
-				<div class="thumbnail">
-					<div class="panel panel-default tit">
-					  <div class="panel-body">
-						KeeeWeee
-					   <span class="caret fr"></span>
-					  </div>
-					</div>
-					<img class="status_img img-thumbnail" src="../image/status.jpg" >
-					<div class="caption">
-					<h3>Thumbnail label</h3>
-					<p><span class="glyphicon glyphicon-map-marker"><strong>China,Beijing</strong></span></p>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span></button>&nbsp;&nbsp;<a href="#"><strong>eq.primos</strong></a> likes this.</p>
-					<p> Comments: <span class="badge">2</span></p>
-					<p><div class="input-group">
-						 <input type="text" class="form-control" placeholder="leave a comment">
-						 <span class="input-group-btn">
-						  <button class="btn btn-default" type="button">Comment</button>
-						 </span>
-					</div>
-					</p>
-					<p><img src="../image/user1.jpg" id="visref" class="img-circle"><a href="#"><strong> chrisstyle</strong></a>  it's beatiful<button type="button" class="close" aria-hidden="true">&times;</button></p>
-					<p><img src="../image/user2.jpg" id="visref" class="img-circle"><a href="#"><strong> VivianYoung1988</strong></a>  wow!<button type="button" class="close" aria-hidden="true">&times;</button></p>
-					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+            <!--stop option list-->
 
-   <!-- footer-->
-   <div id="footer">
-	   <p>©2014 KeeeWeee Inc.</p>
-	   <p>Headquarter: Bush St. 225, San Francisco, CA, 94104 | TEL: (646) 257-9520 | Email: <a href="mailto:hi@keeeweee.com">hi@keeeweee.com</a></p>
-   </div>
+			<!--start chat window-->
+			<div class="col-sm-6 col-md-7">
+				<div class="panel panel-default">
+				    <!--start chat window title-->
+					<div class="panel-heading txt">
+						与 chrisstyle 交谈中<a href="#"><span class="caret fr"></span></a>
+					</div>
+				    <!--stop chat window title-->
+					<!--start chat window panel-->
+					<div class="panel-body">
+					    <div class="well">
+							<div class="alert alert-success" role="alert">
+								<img src="../image/user1.jpg" id="visref" class="img-circle"><a href="#"><strong> chrisstyle:</strong></a>你在干嘛？
+							</div>
+							<div class="alert alert-info" role="alert">
+							<img src="../image/headref.jpg" id="visref" class="img-circle"><a href="#"><strong> Primos:</strong></a>我准备睡觉了
+							</div>
+							<div class="alert alert-success" role="alert">
+								<img src="../image/user1.jpg" id="visref" class="img-circle"><a href="#"><strong> chrisstyle:</strong></a>那你早点休息吧
+							</div>
+							<div class="alert alert-info" role="alert">
+							<img src="../image/headref.jpg" id="visref" class="img-circle"><a href="#"><strong> Primos:</strong></a>好的 晚安
+							</div>
+						</div>
+						<p>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="输入要发送的内容">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button">发送</button>
+								</span>
+							</div>
+						</p>
+					</div>
+					<!--stop chat window panel-->
+				</div>				
+			</div>
+			<!--stop chat window-->
+		</div>
+		<!--stop row-->
+	</div>
+    <!--stop container -->
+
   </body>
 </html>

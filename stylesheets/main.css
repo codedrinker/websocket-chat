@@ -19,14 +19,6 @@ body {
 #visref{
  width:35px;height:35px;
 }
-.status_img {
-width: 460px;
-height: 200px;
-margin-top:3px;
-}
-#footer {
-  font-size: 14px;color:white;text-align: center;
-}
 .cur{
 cursor:pointer;
 }
@@ -37,5 +29,21 @@ float:left;
 float:right;
 }
 .tit{
+background-color:#6B747A;
+}
+.txt{
+text-align:center;
+font-size: 14px;
+font-family: 'Î¢ÈíÑÅºÚ';
+text-shadow: none;
+font-weight:bold;
+}
+.wh{
+height:70%;
+}
+.mt{
+ margin-top:15px;
+}
+.sco{
 background-color:#6B747A;
 }
