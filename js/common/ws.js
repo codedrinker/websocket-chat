@@ -1,3 +1,4 @@
+include("config.js");
 function wsSend(websocket, json) {
 	if (json.m.m == json.m.auto)
 		json.m = {
@@ -182,28 +183,27 @@ function doLogSendReq(actionName, ws, params, mark) {
 	})
 }
 
-function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
+function makeWSProxy(onmsg, onopen, onclose, onerror) {
 	var beginShakingTime = (new Date());
-	echo("beginHandshaking time:" + beginShakingTime.format("yyyy-MM-dd hh:mm:ss.S"))
-	var websocket = (new WebSocket(url));
+	console.info("开始握手:" + beginShakingTime.format("yyyy-MM-dd hh:mm:ss.S"))
+	var websocket = (new WebSocket(wsUrl));
 	var ws = websocket;
 	websocket.onopen = function(evt) {
 		var endShakingTime = (new Date());
-		echo("*open socket successfully " + evt.data + " time:" + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
+		console.info("打开socket成功" + evt.data + " 打开时间:" + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
 		if (onopen) {
 			var timecost = endShakingTime.getTime() - beginShakingTime.getTime();
-			if (timecost < 3000) debug("耗时：" + timecost + "毫秒")
-			else fail("耗时：" + timecost + "毫秒")
+			console.info(timecost + "毫秒")
 			onopen(evt);
 		}
 	};
 	websocket.onclose = function(evt) {
-		echo('*close' + evt.data + " time:"+ (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
+		console.info('socket断开连接' + evt.data + " time:"+ (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
 		if (onclose)
 			onclose(evt);
 	};
 	websocket.onmessage = function(evt) {
-		echo('*msg ' + evt.data);
+		console.info('*msg ' + evt.data);
 		var json = toJson(evt.data)
 		if (json.h != undefined && json.h.s == undefined) {
 			if (onmsg) {
@@ -236,27 +236,4 @@ function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
 	return obj;
 }
 
-// 获取 好友平台
-function getSnsPlatform(str) {
-	return str.split(":")[0];
-};
-// 判定是json否空
-function isEmptyObject(obj) {
-	for ( var name in obj) {
-		return false;
-	}
-	return true;
-};
-// json操作集
-function jsonAppend(j1, j2) {
-	if (isEmptyObject(j2)) {
-		return j1;
-	} else if (isEmptyObject(j1)) {
-		return j2;
-	} else {
-		var j1s = JSON.stringify(j1);
-		var j2s = JSON.stringify(j2);
-		return JSON.parse(j1s.slice(0, (j1s.length - 1)) + ","
-				+ j2s.slice(1, +j2s.length));
-	}
-};
+】
