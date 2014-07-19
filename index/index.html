@@ -76,69 +76,137 @@
 						<h3 class="panel-title">KeeeWeee<a href="#"><span class="caret fr"></span></a></h3>
 					</div>
 					<div class="panel-body">
-						<ul class="nav nav-pills" role="tablist">
-							<li class="active"><a href="#">消息<span class="badge">12</span></a></li>
-								<li><a href="#">好友<span class="badge">6</span></a></li>
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="active"><a href="#message" role="tab" data-toggle="tab">消息<span class="badge">12</span></a></li>
+								<li><a href="#contacts" role="tab" data-toggle="tab">好友<span class="badge">6</span></a></li>
 							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">更多<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">朋友圈</a></li>
-									<li><a href="#">广场</a></li>
-									<li><a href="#">通知</a></li>
+									<li><a href="#moments" role="tab" data-toggle="tab">朋友圈</a></li>
+									<li><a href="#discover" role="tab" data-toggle="tab">广场</a></li>
+									<li><a href="#notifications" role="tab" data-toggle="tab">通知</a></li>
 								</ul>
 							</li>
 						</ul>
-						<div class="list-group mt">
-							<a href="#" class="list-group-item" role="alert">
-								<img src="../image/user2.jpg" id="visref" class="img-circle">&nbsp;&nbsp;薇薇
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-							<a href="#" class="list-group-item">
-								<img src="../image/group.jpg" id="visref" class="img-circle">&nbsp;&nbsp;KeeeWeee(北京)
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-							<a href="#" class="list-group-item">
-								<img src="../image/tianweisong.jpg" id="visref" class="img-circle">&nbsp;&nbsp;田伟松
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-							<a href="#" class="list-group-item">
-								<img src="../image/maguokai.jpg" id="visref" class="img-circle">&nbsp;&nbsp;马国凯
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-							<a href="#" class="list-group-item">
-								<img src="../image/xiaozhao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;小招
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-							<a href="#" class="list-group-item">
-								<img src="../image/huaqiao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;化桥
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-							<a href="#" class="list-group-item active">
-							<img src="../image/user1.jpg" id="visref" class="img-circle">&nbsp;&nbsp;chrisstyle
-								<button type="button" class="close" data-dismiss="alert">
-									<span aria-hidden="true">&times;</span>
-									<span class="sr-only">Close</span>
-								</button>
-							</a>
-						</div>
+                                                <!--start tab content-->
+						<div class="tab-content">
+							<!--start message pane-->
+							<div class="list-group mt tab-pane fade in active" id="message">
+								<a href="#" class="list-group-item" role="alert">
+									<img src="../image/user2.jpg" id="visref" class="img-circle">&nbsp;&nbsp;薇薇
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/group.jpg" id="visref" class="img-circle">&nbsp;&nbsp;KeeeWeee(北京)
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/tianweisong.jpg" id="visref" class="img-circle">&nbsp;&nbsp;田伟松
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/maguokai.jpg" id="visref" class="img-circle">&nbsp;&nbsp;马国凯
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/xiaozhao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;小招
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/huaqiao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;化桥
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item active">
+								<img src="../image/user1.jpg" id="visref" class="img-circle">&nbsp;&nbsp;chrisstyle
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+							</div>
+		                                       <!--stop message pane-->
+		                                       <!--start contacts pane-->
+							<div class="list-group mt tab-pane fade" id="contacts">
+								<a href="#" class="list-group-item" role="alert">
+									<img src="../image/user2.jpg" id="visref" class="img-circle">&nbsp;&nbsp;薇薇
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/group.jpg" id="visref" class="img-circle">&nbsp;&nbsp;KeeeWeee(北京)
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/tianweisong.jpg" id="visref" class="img-circle">&nbsp;&nbsp;田伟松
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/maguokai.jpg" id="visref" class="img-circle">&nbsp;&nbsp;马国凯
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/xiaozhao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;小招
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item">
+									<img src="../image/huaqiao.jpg" id="visref" class="img-circle">&nbsp;&nbsp;化桥
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+								<a href="#" class="list-group-item active">
+								<img src="../image/user1.jpg" id="visref" class="img-circle">&nbsp;&nbsp;chrisstyle
+									<button type="button" class="close" data-dismiss="alert">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+								</a>
+							</div>
+							<!--stop contacts pane-->
+							<!--start discover pane-->
+                                                        <div class="list-group mt tab-pane fade" id="discover">discover</div>
+							<!--stop discover pane-->
+							<!--start notifications pane-->
+                                                        <div class="list-group mt tab-pane fade" id="notifications">notifications</div>
+							<!--stop notifications pane-->
+							<!--start moments pane-->
+                                                        <div class="list-group mt tab-pane fade" id="moments">moments</div>
+							<!--stop moments pane-->
+                                        	</div>
+						<!--stop tab content-->
 					</div>
 				</div>
 			</div>
