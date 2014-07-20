@@ -10,8 +10,8 @@
 		<link rel="stylesheet" href="../stylesheets/main.css">
 		<link rel="stylesheet" href="../stylesheets/login.css">
 		<link rel="stylesheet" href="../stylesheets/docs.min.css">
-		<link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
-		<link rel="stylesheet" href="../stylesheets/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../stylesheets/bootstrap.min.3.2.0.css">
+		<link rel="stylesheet" href="../stylesheets/bootstrap-theme.min.3.2.0.css">
 		<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	</head>
@@ -90,9 +90,17 @@
 			<!--start option list-->
 			<div class="col-sm-6 col-md-4">
 				<div class="panel panel-default">
+					<!--start title menu-->	
 					<div class="panel-heading">
-						<h3 class="panel-title">KeeeWeee<a href="#"><span class="caret fr"></span></a></h3>
+						<div class="dropdown panel-title">KeeeWeee
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#setting" role="tab" data-toggle="tab">设置</a></li>
+								<li><a href="#logout" role="tab" data-toggle="tab">退出</a></li>
+							</ul>
+						</div>
 					</div>
+					<!--stop title menu-->
 					<div class="panel-body">
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="active">
@@ -212,25 +220,82 @@
 							  <!--start sorted contact list panel-->
 							</div>
 							<!--stop contacts pane-->
-							<!--start discover pane-->
-                                                        <div class="list-group mt tab-pane fade" id="moments">
-								<div class="row">
-									<div class="col-xs-6 col-md-3">
-										<a href="#" class="thumbnail">
-										<img src="../image/status.jpg" alt="...">
-										</a>
-									</div>
-									pengyouquan，暂未开通
-								</div>
-							</div>
-							<!--stop discover pane-->
-							<!--start notifications pane-->
-                                                        <div class="list-group mt tab-pane fade" id="notifications">通知，暂未开通</div>
-							<!--stop notifications pane-->
 							<!--start moments pane-->
-                                                        <div class="list-group mt tab-pane fade" id="discover">广场圈，暂未开通</div>
+                            <div class="list-group mt tab-pane fade" id="moments">
+								<!--start one status item-->
+								<li class="list-group-item">
+									<ul class="media-list">
+										<li class="media">
+											<a class="pull-left" href="#">
+												<img class="media-object img-circle" id="visref" src="../image/headref.jpg">
+											</a>
+											<div class="media-body">
+												<a href="#"><strong> Primos</strong></a>
+											</div>
+										</li>
+										<li class="media">
+											<a class="pull-left" href="#">
+												<img class="media-object img-thumbnail" data-src="holder.js/128x64" alt="128x64" src="../image/status.jpg" style="width: 128px; height: 64px;">
+											</a>
+											<div class="media-body">
+												<p>今天我上街，见到一分钱，警察叔叔夸奖我...</p>
+											</div>
+										</li>
+										<li class="media">
+											<div class="pull-left">
+												1 <strong>likes</strong> ,9 <strong>comments</strong>
+											</div>
+											<div class="media-body pull-right">
+												<a href="#"><strong>赞  </strong></a>|
+												<a href="#"><strong>  评论 </strong></a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--stop one status item-->
+								<!--start one status item-->
+								<li class="list-group-item">
+									<ul class="media-list">
+										<li class="media">
+											<a class="pull-left" href="#">
+												<img class="media-object img-circle" id="visref" src="../image/user2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="#"><strong> weiwei</strong></a>
+											</div>
+										</li>
+										<li class="media">
+											<div class="media-body">
+												<p>今天早早来公司了，又没有人，人都去哪里了...</p>
+											</div>
+										</li>
+										<li class="media">
+											<div class="pull-left">
+												1 <strong>likes</strong> ,9 <strong>comments</strong>
+											</div>
+											<div class="media-body pull-right">
+												<a href="#"><strong>赞  </strong></a>|
+												<a href="#"><strong>  评论 </strong></a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--stop one status item-->
+							</div>
 							<!--stop moments pane-->
-                                        	</div>
+							<!--start notifications pane-->
+                            <div class="list-group mt tab-pane fade" id="notifications">通知，暂未接入</div>
+							<!--stop notifications pane-->
+							<!--start setting pane-->
+                            <div class="list-group mt tab-pane fade" id="setting">你是想设置东西吗？</div>
+							<!--stop setting pane-->
+							<!--start logout pane-->
+                            <div class="list-group mt tab-pane fade" id="logout">你基本上已经退出了！！！</div>
+							<!--stop notifications pane-->
+							<!--start logout pane-->
+                            <div class="list-group mt tab-pane fade" id="discover">广场圈，web版本不涉及地理位置等信息，所以暂时为考虑接入</div>
+							<!--stop discover pane-->
+                         </div>
 						<!--stop tab content-->
 					</div>
 				</div>
