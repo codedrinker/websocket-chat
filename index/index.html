@@ -9,6 +9,7 @@
 
 		<link rel="stylesheet" href="../stylesheets/main.css">
 		<link rel="stylesheet" href="../stylesheets/login.css">
+		<link rel="stylesheet" href="../stylesheets/docs.min.css">
 		<link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
 		<link rel="stylesheet" href="../stylesheets/bootstrap-theme.min.css">
 		<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
@@ -64,11 +65,11 @@
 					<p><img src="../image/qq.png" id="userref" class="img-circle img-thumbnail cur"></p>
 					<p><img src="../image/add.jpg" id="userref" class="img-circle img-thumbnail cur" data-toggle="modal" href="login.html" data-target=".bs-example-modal-sm"></p>
 			</div>
-			<div class="modal fade bs-example-modal-sm" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<!--start login dialog-->
+			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 			  <div class="modal-dialog modal-sm">
-			    <div class="modal-content">	
-				<h1 class="text-center login-title">KeeeWeee Login</h1>
-				<div class="account-wall">
+				<div class="account-wall">	
+					<h1 class="text-center login-title">KeeeWeee Login</h1>
 					<img class="profile-img" src="../image/logo.jpg">
 					<form class="form-signin" action="index.html">
 					<input name="login_uid" type="text" class="form-control" placeholder="login_uid" required autofocus>
@@ -80,11 +81,11 @@
 						Remember me
 					</label>
 					<a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
-					</form>
-				</div>		
+					</form>	
 			    </div>
 			  </div>
 			</div>
+			<!--stop login dialog-->
 			<!--stop account line-->
 			<!--start option list-->
 			<div class="col-sm-6 col-md-4">
@@ -212,13 +213,22 @@
 							</div>
 							<!--stop contacts pane-->
 							<!--start discover pane-->
-                                                        <div class="list-group mt tab-pane fade" id="discover">广场，暂未开通</div>
+                                                        <div class="list-group mt tab-pane fade" id="moments">
+								<div class="row">
+									<div class="col-xs-6 col-md-3">
+										<a href="#" class="thumbnail">
+										<img src="../image/status.jpg" alt="...">
+										</a>
+									</div>
+									pengyouquan，暂未开通
+								</div>
+							</div>
 							<!--stop discover pane-->
 							<!--start notifications pane-->
                                                         <div class="list-group mt tab-pane fade" id="notifications">通知，暂未开通</div>
 							<!--stop notifications pane-->
 							<!--start moments pane-->
-                                                        <div class="list-group mt tab-pane fade" id="moments">朋友圈，暂未开通</div>
+                                                        <div class="list-group mt tab-pane fade" id="discover">广场圈，暂未开通</div>
 							<!--stop moments pane-->
                                         	</div>
 						<!--stop tab content-->
