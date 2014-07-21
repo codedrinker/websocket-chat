@@ -23,6 +23,8 @@ function jsonAppend(j1, j2) {
 				+ j2s.slice(1, +j2s.length));
 	}
 };
+
+//加载菊花
 function showspin(id){
 	var opts = {
 		lines: 11, // The number of lines to draw
@@ -44,4 +46,11 @@ function showspin(id){
 		};
 	var target = document.getElementById(id);
 	var spinner = new Spinner(opts).spin(target);
+}
+
+//退出浏览器提示
+var is_focus = false;
+function alert_if_is_focus() {
+    if (is_focus)
+        return '您确定要退出程序吗？';
 }
