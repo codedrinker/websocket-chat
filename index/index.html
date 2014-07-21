@@ -14,6 +14,9 @@
 		<link rel="stylesheet" href="../stylesheets/bootstrap-theme.min.3.2.0.css">
 		<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="../js/common/util.js"></script>
+		<script src="../js/spin/spin.js"></script>
+		<script src="../js/spin/spin.min.js"></script>
 	</head>
 	<body>
 	<!--start header-->
@@ -97,6 +100,7 @@
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#setting" role="tab" data-toggle="tab">设置</a></li>
 								<li><a href="#logout" role="tab" data-toggle="tab">退出</a></li>
+								<li><a href="#createChat" role="tab" data-toggle="tab" onclick="showspin('createChat')">创建会话</a></li>
 							</ul>
 						</div>
 					</div>
@@ -127,7 +131,7 @@
 								</ul>
 							</li>
 						</ul>
-                                                <!--start tab content-->
+                        <!--start tab content-->
 						<div class="tab-content">
 							<!--start message pane-->
 							<div class="list-group mt tab-pane fade in active" id="message">
@@ -181,8 +185,8 @@
 									</button>
 								</a>
 							</div>
-		                                       <!--stop message pane-->
-		                                       <!--start contacts pane-->
+						   <!--stop message pane-->
+						   <!--start contacts pane-->
 							<div class="panel-group mt tab-pane fade" id="contacts">
 							  <!--start group panel-->
 							  <div class="panel panel-default">
@@ -295,6 +299,9 @@
 							<!--start logout pane-->
                             <div class="list-group mt tab-pane fade" id="discover">广场圈，web版本不涉及地理位置等信息，所以暂时为考虑接入</div>
 							<!--stop discover pane-->
+							<!--start createChat pane-->
+                            <div class="list-group mt tab-pane fade" id="createChat">createChat</div>
+							<!--stop createChat pane-->
                          </div>
 						<!--stop tab content-->
 					</div>
