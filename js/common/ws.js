@@ -60,7 +60,7 @@ function makePath(pathArray, fields) {
 		path[fields[i]] = pathArray[i];
 	}
 	if (!check)
-		fail("Â·¾¶´íÎó£º" + pathArray.toString);
+		fail("Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + pathArray.toString);
 	return path;
 }
 
@@ -185,20 +185,20 @@ function doLogSendReq(actionName, ws, params, mark) {
 
 function makeWSProxy(onmsg, onopen, onclose, onerror) {
 	var beginShakingTime = (new Date());
-	console.info("¿ªÊ¼ÎÕÊÖ:" + beginShakingTime.format("yyyy-MM-dd hh:mm:ss.S"))
+	console.info("ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½:" + beginShakingTime.format("yyyy-MM-dd hh:mm:ss.S"))
 	var websocket = (new WebSocket(wsUrl));
 	var ws = websocket;
 	websocket.onopen = function(evt) {
 		var endShakingTime = (new Date());
-		console.info("´ò¿ªsocket³É¹¦" + evt.data + " ´ò¿ªÊ±¼ä:" + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
+		console.info("ï¿½ï¿½socketï¿½É¹ï¿½" + evt.data + " ï¿½ï¿½Ê±ï¿½ï¿½:" + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
 		if (onopen) {
 			var timecost = endShakingTime.getTime() - beginShakingTime.getTime();
-			console.info(timecost + "ºÁÃë")
+			console.info(timecost + "ï¿½ï¿½ï¿½ï¿½")
 			onopen(evt);
 		}
 	};
 	websocket.onclose = function(evt) {
-		console.info('socket¶Ï¿ªÁ¬½Ó' + evt.data + " time:"+ (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
+		console.info('socketï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½' + evt.data + " time:"+ (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
 		if (onclose)
 			onclose(evt);
 	};
@@ -210,9 +210,9 @@ function makeWSProxy(onmsg, onopen, onclose, onerror) {
 				if (json.h.m != undefined & json.h.m.t != undefined) {
 					var timecost = new Date().getTime() - json.h.m.t
 					if (timecost < 1000)
-						debug("ºÄÊ±£º" + timecost + "ºÁÃë")
+						debug("ï¿½ï¿½Ê±ï¿½ï¿½" + timecost + "ï¿½ï¿½ï¿½ï¿½")
 					else
-						fail("ºÄÊ±£º" + timecost + "ºÁÃë")
+						fail("ï¿½ï¿½Ê±ï¿½ï¿½" + timecost + "ï¿½ï¿½ï¿½ï¿½")
 				}
 				onmsg(evt);
 			}
@@ -235,5 +235,3 @@ function makeWSProxy(onmsg, onopen, onclose, onerror) {
 	};
 	return obj;
 }
-
-¡¿

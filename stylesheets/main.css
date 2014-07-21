@@ -1,54 +1,77 @@
 body {
-	font-size: 16px;
-	font-family: "Open Sans",serif;
-	background: transparent;
-	background-color:#6B747A !important;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+    font-size: 16px;
+    font-family: "Open Sans", serif;
+    background: transparent;
+    background-color: #6B747A !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
+
 #logo {
- padding-left:10px;padding-top:5px;
+    padding-left: 10px;
+    padding-top: 5px;
 }
-#headref{
- width:35px;height:35px;margin-top:8px;
+
+.headref {
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
 }
-#userref{
- width:55px;height:55px;
+
+.userref {
+    width: 55px;
+    height: 55px;
 }
-#visref{
- width:35px;height:35px;
+
+.visref {
+    width: 35px;
+    height: 35px;
 }
-.cur{
-cursor:pointer;
+
+.cur {
+    cursor: pointer;
 }
-.fl{
-float:left;
+
+.fl {
+    float: left;
 }
-.fr{
-float:right;
+
+.fr {
+    float: right;
 }
-.tit{
-background-color:#6B747A;
+
+.tit {
+    background-color: #6B747A;
 }
-.txt{
-text-align:center;
-font-size: 14px;
-font-family: 'Î¢ÈíÑÅºÚ';
-text-shadow: none;
-font-weight:bold;
+
+.txt {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Î¢ï¿½ï¿½ï¿½Åºï¿½';
+    text-shadow: none;
+    font-weight: bold;
 }
-.wh{
-height:70%;
+
+.wh {
+    height: 70%;
 }
-.mt{
- margin-top:15px;
+
+.mt {
+    margin-top: 15px;
 }
-.chat{
-margin-top:7px;
-margin-bottom:7px;
+
+.chat {
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
-.alertdiv{
-height:500px;
-width:600px;
+
+.alertdiv {
+    height: 500px;
+    width: 600px;
+}
+
+.liicon {
+    height: 20px;
+    width: 22px;
 }
