@@ -13,38 +13,6 @@ body {
     padding-top: 5px;
 }
 
-.headref {
-    width: 35px;
-    height: 35px;
-    margin-top: 8px;
-}
-
-.userref {
-    width: 55px;
-    height: 55px;
-}
-
-.visref {
-    width: 35px;
-    height: 35px;
-}
-
-.cur {
-    cursor: pointer;
-}
-
-.fl {
-    float: left;
-}
-
-.fr {
-    float: right;
-}
-
-.tit {
-    background-color: #6B747A;
-}
-
 .txt {
     text-align: center;
     font-size: 14px;
@@ -58,20 +26,14 @@ body {
 }
 
 .mt {
-    margin-top: 15px;
+    margin-top: 10px;
+}
+
+.mb {
+    margin-bottom: 10px;
 }
 
 .chat {
     margin-top: 7px;
     margin-bottom: 7px;
-}
-
-.alertdiv {
-    height: 500px;
-    width: 600px;
-}
-
-.liicon {
-    height: 20px;
-    width: 22px;
 }

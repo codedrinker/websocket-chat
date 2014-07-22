@@ -1,0 +1,63 @@
+.headref {
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+}
+
+.userref {
+    width: 55px;
+    height: 55px;
+}
+
+.profileref {
+    width: 70px;
+    height: 70px;
+    margin-top: 80px;
+}
+
+.nick {
+    color: #ffffff;
+}
+
+.visref {
+    width: 35px;
+    height: 35px;
+}
+
+.snsicon2 {
+    width: 20px;
+    height: 20px;
+}
+
+.cur {
+    cursor: pointer;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tit {
+    background-color: #6B747A;
+}
+
+.liicon {
+    height: 20px;
+    width: 22px;
+}
+
+.bgd {
+    /*background-color: #00f;*/
+    background-image: url("../image/user2.jpg");
+    /*full image */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;;
+    height: 250px;
+    margin-top: 3px;
+    text-align: center;
+}

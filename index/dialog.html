@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../stylesheets/login.css">
+    <link rel="stylesheet" href="../stylesheets/profile.css">
+    <link rel="stylesheet" href="../stylesheets/bootstrap/3.0.3/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/bootstrap/3.0.3/bootstrap-theme.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- start moments dialog -->
+<a href="#" data-toggle="modal" data-target="#moment_details">查看详情</a>
+<!-- stop moments dialog -->
+<!-- start moments dialog modal -->
+<div class="modal fade" id="moment_details" tabindex="-1" role="dialog" aria-labelledby="moment_details_label"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="moment_details_label">查看内容详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6 col-md-2">
+                        <div id="creator">
+                            <p><img src="../image/headref.jpg" class="userref img-circle img-thumbnail"></p>
+
+                            <p><a href="#"><strong>eq.primos</strong></a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-9">
+                        <div class="thumbnail">
+                            <img class="status_img img-thumbnail" src="../image/status.jpg">
+
+                            <div class="caption">
+                                <p><span class="glyphicon glyphicon-map-marker"><strong>China,Beijing</strong></span>
+                                    <span class="pull-right"><strong>2014-7-22 23:12:20</strong></span>
+                                </p>
+
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                    porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
+                                    elit.</p>
+
+                                <p>
+                                    <button type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-thumbs-up"></span></button>
+                                    &nbsp;&nbsp;<a href="#"><strong>eq.primos</strong></a> likes this.
+                                </p>
+                                <p> Comments: <span class="badge">2</span></p>
+
+                                <p>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="leave a comment">
+						 <span class="input-group-btn">
+						  <button class="btn btn-default" type="button">Comment</button>
+						 </span>
+                                </div>
+                                </p>
+                                <p><img src="../image/user1.jpg" class="visref img-circle"><a href="#"><strong>
+                                    chrisstyle</strong></a> it's beatiful
+                                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                                </p>
+                                <p><img src="../image/user2.jpg" class="visref img-circle"><a href="#"><strong>
+                                    VivianYoung1988</strong></a> wow!
+                                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- stop moments dialog modal-->
+</body>
+</html>
