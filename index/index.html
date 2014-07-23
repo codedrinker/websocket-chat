@@ -141,7 +141,7 @@
 <!--start tab content-->
 <div class="tab-content">
 <!--start message pane-->
-<div class="list-group mt tab-pane fade in active" id="message">
+<div class="list-group mt tab-pane fade in active scrollspy-pane" id="message">
     <a href="#" class="list-group-item" role="alert">
         <img src="../image/user2.jpg" class="img-circle visref">&nbsp;&nbsp;薇薇
         <button type="button" class="close" data-dismiss="alert">
@@ -149,7 +149,7 @@
             <span class="sr-only">Close</span>
         </button>
     </a>
-    <a href="#" class="list-group-item">
+    <a href="#" class="list-group-item active">
         <img src="../image/group.jpg" class="img-circle visref">&nbsp;&nbsp;KeeeWeee(北京)
         <button type="button" class="close" data-dismiss="alert">
             <span aria-hidden="true">&times;</span>
@@ -184,7 +184,35 @@
             <span class="sr-only">Close</span>
         </button>
     </a>
-    <a href="#" class="list-group-item active">
+    <a href="#" class="list-group-item">
+        <img src="../image/user1.jpg" class="img-circle visref">&nbsp;&nbsp;chrisstyle
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </a>
+    <a href="#" class="list-group-item">
+        <img src="../image/maguokai.jpg" class="img-circle visref">&nbsp;&nbsp;马国凯
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </a>
+    <a href="#" class="list-group-item">
+        <img src="../image/xiaozhao.jpg" class="img-circle visref">&nbsp;&nbsp;小招
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </a>
+    <a href="#" class="list-group-item">
+        <img src="../image/huaqiao.jpg" class="img-circle visref">&nbsp;&nbsp;化桥
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </a>
+    <a href="#" class="list-group-item">
         <img src="../image/user1.jpg" class="img-circle visref">&nbsp;&nbsp;chrisstyle
         <button type="button" class="close" data-dismiss="alert">
             <span aria-hidden="true">&times;</span>
@@ -194,12 +222,14 @@
 </div>
 <!--stop message pane-->
 <!--start contacts pane-->
-<div class="panel-group mt tab-pane fade" id="contacts">
+<div class="panel-group mt tab-pane fade scrollspy-pane" id="contacts">
     <!--start search input-->
+    <!--
     <div class="input-group mb">
         <input type="text" class="form-control">
         <span class="input-group-addon glyphicon glyphicon-search cur"></span>
     </div>
+    -->
     <!--stop search input-->
     <!--start group panel-->
     <div class="panel panel-default">
@@ -231,6 +261,10 @@
             <li class="list-group-item disabled">X</li>
             <a href="#" data-toggle="modal" data-target="#profile_details" class="list-group-item">
                 <img src="../image/xiaozhao.jpg" class="img-circle visref">&nbsp;&nbsp;小昭
+            </a>
+            <li class="list-group-item disabled">Y</li>
+            <a href="#" data-toggle="modal" data-target="#profile_details" class="list-group-item">
+                <img src="../image/user2.jpg" class="img-circle visref">&nbsp;&nbsp;Vivi Young(杨韦唯)
             </a>
         </div>
     </div>
@@ -298,7 +332,7 @@
 </div>
 <!--stop contacts pane-->
 <!--start moments pane-->
-<div class="list-group mt tab-pane fade" id="moments">
+<div class="list-group mt tab-pane fade scrollspy-pane" id="moments">
     <!--start one status item-->
     <li class="list-group-item">
         <ul class="media-list">
@@ -434,19 +468,19 @@
 </div>
 <!--stop moments pane-->
 <!--start notifications pane-->
-<div class="list-group mt tab-pane fade" id="notifications">通知，暂未接入</div>
+<div class="list-group mt tab-pane fade scrollspy-pane" id="notifications">通知，暂未接入</div>
 <!--stop notifications pane-->
 <!--start setting pane-->
-<div class="list-group mt tab-pane fade" id="setting">你是想设置东西吗？</div>
+<div class="list-group mt tab-pane fade scrollspy-pane" id="setting">你是想设置东西吗？</div>
 <!--stop setting pane-->
 <!--start logout pane-->
-<div class="list-group mt tab-pane fade" id="logout">你基本上已经退出了！！！</div>
+<div class="list-group mt tab-pane fade scrollspy-pane" id="logout">你基本上已经退出了！！！</div>
 <!--stop notifications pane-->
 <!--start logout pane-->
-<div class="list-group mt tab-pane fade" id="discover">广场圈，web版本不涉及地理位置等信息，所以暂时为考虑接入</div>
+<div class="list-group mt tab-pane fade scrollspy-pane" id="discover">广场圈，web版本不涉及地理位置等信息，所以暂时为考虑接入</div>
 <!--stop discover pane-->
 <!--start createChat pane-->
-<div class="list-group mt tab-pane fade" id="createChat">createChat</div>
+<div class="list-group mt tab-pane fade scrollspy-pane" id="createChat">createChat</div>
 <!--stop createChat pane-->
 </div>
 <!--stop tab content-->
@@ -464,7 +498,7 @@
         </div>
         <!--stop chat window title-->
         <!--start chat window panel-->
-        <div class="panel-body chat">
+        <div class="panel-body chat scrollspy-chat-pane">
             <div class="well">
                 <div class="alert alert-success" role="alert">
                     <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
@@ -483,14 +517,44 @@
                 </div>
                 <div class="alert alert-success" role="alert">
                     <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
-                    chrisstyle:</strong></a>那你早点休息吧
+                    chrisstyle:</strong></a>今天怎么这么早？
                     <button type="button" class="close" data-dismiss="alert">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button>
                 </div>
                 <div class="alert alert-info" role="alert">
-                    <img src="../image/headref.jpg" class="img-circle visref"><a href="#"><strong> Primos:</strong></a>好的
+                    <img src="../image/headref.jpg" class="img-circle visref"><a href="#"><strong> Primos:</strong></a>今天有点累，哈哈
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="alert alert-success" role="alert">
+                    <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
+                    chrisstyle:</strong></a>不是你的作风啊？
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="alert alert-info" role="alert">
+                    <img src="../image/headref.jpg" class="img-circle visref"><a href="#"><strong> Primos:</strong></a>偶尔变化一下
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="alert alert-success" role="alert">
+                    <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
+                    chrisstyle:</strong></a>好吧，那你早点休息吧
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="alert alert-info" role="alert">
+                    <img src="../image/headref.jpg" class="img-circle visref"><a href="#"><strong> Primos:</strong></a>好的，你也是，
                     晚安
                     <button type="button" class="close" data-dismiss="alert">
                         <span aria-hidden="true">&times;</span>

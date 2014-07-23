@@ -37,3 +37,17 @@ body {
     margin-top: 7px;
     margin-bottom: 7px;
 }
+
+.scrollspy-pane {
+    position: relative;
+    height: 400px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.scrollspy-chat-pane {
+    position: relative;
+    height: 488px;
+    margin-top: 10px;
+    overflow: auto;
+}
