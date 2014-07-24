@@ -51,3 +51,15 @@ body {
     margin-top: 10px;
     overflow: auto;
 }
+
+.opacity {
+    -moz-opacity: 0.1; /* FF 3.5以下 */
+    opacity: 0.1; /* FF 3.5及以上 */
+    filter: alpha(opacity=10); /* IE6及以上 */
+    background: #fff;
+}
+
+.noopacity {
+    background-color: transparent;
+    color: #fff;
+}
