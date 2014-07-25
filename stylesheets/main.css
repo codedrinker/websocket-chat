@@ -63,3 +63,8 @@ body {
     background-color: transparent;
     color: #fff;
 }
+
+.menu {
+    width: 18px;
+    height: 18px;
+}

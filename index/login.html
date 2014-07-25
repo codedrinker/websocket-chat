@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-	<head>
-		<title>KeeeWeee Web版1.0.0 官网账号登陆界面</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="">
+<head>
+    <title>KeeeWeee Web 1.0.0 Beta版</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../image/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../stylesheets/login.css">
+    <link rel="stylesheet" href="../stylesheets/profile.css">
 
-		<link rel="stylesheet" href="../stylesheets/login.css">
-		<link rel="stylesheet" href="../stylesheets/main.css">
-		<link rel="stylesheet" href="../stylesheets/bootstrap/3.0.3/bootstrap.min.css">
-		<link rel="stylesheet" href="../stylesheets/bootstrap/3.0.3/bootstrap-theme.min.css">
-		<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-		<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-md-5 col-md-offset-3">
-					<h1 class="text-center login-title">KeeeWeee Official Customer Service Login</h1>
-					<div class="account-wall">
-						<img class="profile-img" src="../image/logo.jpg">
-						<form class="form-signin" action="index.html">
-						<input name="login_uid" type="text" class="form-control" placeholder="login_uid" required autofocus>
-						<input name="access_token" type="password" class="form-control" placeholder="access_token" required>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">
-							Sign in</button>
-						<label class="checkbox pull-left">
-							<input name="remember" type="checkbox" value="remember-me">
-							Remember me
-						</label>
-						<a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
-						<hr>
-						<ul class="nav navbar-nav navbar-right clearfix">
-							<li><img src="../image/social_icons/icon_facebook_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_twitter_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_linkedin_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_weibo_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_vk_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_insta_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_google_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-							<li><img src="../image/social_icons/icon_tqq_48_border@2x.png" class="img-circle snsicon cur">&nbsp;</li>
-						</ul>
-						<hr>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!--bootstarp-->
+    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="../plugins/bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="../plugins/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!--jquery-->
+    <script src="../plugins/jquery/1.0.2/jquery.js"></script>
+
+
+    <!--spin-->
+    <script src="../plugins/spin/2.0.1/spin.js"></script>
+    <script src="../plugins/spin/2.0.1/spin.min.js"></script>
+
+    <!--service-->
+    <script src="../js/common/util.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-md-offset-3">
+            <h1 class="text-center login-title">KeeeWeee Official Customer Service Login</h1>
+
+            <div class="account-wall">
+                <img class="profile-img" src="../image/logo.jpg">
+
+                <form class="form-signin" action="index.html">
+                    <input name="login_uid" type="text" class="form-control" placeholder="login_uid" required autofocus>
+                    <input name="access_token" type="password" class="form-control" placeholder="access_token" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Sign in
+                    </button>
+                    <label class="checkbox pull-left">
+                        <input name="remember" type="checkbox" value="remember-me">
+                        Remember me
+                    </label>
+                    <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                    <hr>
+                    <ul class="nav navbar-nav navbar-right clearfix">
+                        <li><img src="../image/social_icons/icon_facebook_48_border@2x.png"
+                                 class="img-circle snsicon cur">&nbsp;</li>
+                        <li><img src="../image/social_icons/icon_twitter_48_border@2x.png"
+                                 class="img-circle snsicon cur">&nbsp;</li>
+                        <li><img src="../image/social_icons/icon_linkedin_48_border@2x.png"
+                                 class="img-circle snsicon cur">&nbsp;</li>
+                        <li><img src="../image/social_icons/icon_weibo_48_border@2x.png" class="img-circle snsicon cur">&nbsp;
+                        </li>
+                        <li><img src="../image/social_icons/icon_vk_48_border@2x.png" class="img-circle snsicon cur">&nbsp;
+                        </li>
+                        <li><img src="../image/social_icons/icon_insta_48_border@2x.png" class="img-circle snsicon cur">&nbsp;
+                        </li>
+                        <li><img src="../image/social_icons/icon_google_48_border@2x.png"
+                                 class="img-circle snsicon cur">&nbsp;</li>
+                        <li><img src="../image/social_icons/icon_tqq_48_border@2x.png" class="img-circle snsicon cur">&nbsp;
+                        </li>
+                    </ul>
+                    <hr>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>

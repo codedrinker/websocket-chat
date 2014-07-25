@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>KeeeWeee Web版1.0.0</title>
+    <title>KeeeWeee Web 1.0.0 Beta版</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -10,14 +10,26 @@
     <link rel="stylesheet" href="../stylesheets/main.css">
     <link rel="stylesheet" href="../stylesheets/login.css">
     <link rel="stylesheet" href="../stylesheets/profile.css">
-    <link rel="stylesheet" href="../stylesheets/bootstrap/3.0.3/docs.min.css">
-    <link rel="stylesheet" href="../stylesheets/bootstrap/3.2.0/bootstrap.min.css">
-    <link rel="stylesheet" href="../stylesheets/bootstrap/3.2.0/bootstrap-theme.min.css">
-    <script src="../js/jquery/1.0.2/jquery.js"></script>
-    <script src="../js/bootstrap/3.0.3/bootstrap.min.js"></script>
+
+    <!--jquery-->
+    <script src="../plugins/jquery/1.0.2/jquery.js"></script>
+
+    <!--bootstarp-->
+    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!--<script src="../plugins/bootstrap/3.2.0/js/bootstrap.js"></script>-->
+    <script src="../plugins/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--<script src="../plugins/doc/js/docs.min.js"></script>-->
+
+    <link rel="stylesheet" href="../plugins/doc/css/docs.min.css">
+
+    <!--spin-->
+    <script src="../plugins/spin/2.0.1/spin.js"></script>
+    <script src="../plugins/spin/2.0.1/spin.min.js"></script>
+
+    <!--service-->
     <script src="../js/common/util.js"></script>
-    <script src="../js/spin/spin.js"></script>
-    <script src="../js/spin/spin.min.js"></script>
+
 </head>
 <body>
 <!--start header-->
@@ -109,10 +121,9 @@
 <!--start title menu-->
 <div class="panel-heading">
     <div class="panel-title">KeeeWeee
-        <span class="pull-right glyphicon glyphicon-cog cur">&nbsp;</span>
-        <span class="pull-right glyphicon glyphicon-search cur">&nbsp;</span>
-        <span class="pull-right glyphicon glyphicon-qrcode cur">&nbsp;</span>
-        <span class="pull-right glyphicon glyphicon-edit cur">&nbsp;</span>
+        <span class="pull-right glyphicon glyphicon-cog cur menu">&nbsp;</span>
+        <span class="pull-right glyphicon glyphicon-edit cur menu">&nbsp;</span>
+        <span class="pull-right glyphicon glyphicon-search cur menu">&nbsp;</span>
         <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
          <ul class="dropdown-menu" role="menu">
              <li><a href="#setting" role="tab" data-toggle="tab">设置</a></li>
@@ -513,11 +524,12 @@
     <div class="panel panel-default">
         <!--start chat window title-->
         <div class="panel-heading txt">
-            与 chrisstyle 交谈中<a href="#"><span class="caret fr"></span></a>
+            与 chrisstyle 交谈中 <span class="pull-right glyphicon glyphicon-cog cur menu">&nbsp;</span>
         </div>
         <!--stop chat window title-->
         <!--start chat window panel-->
-        <div class="panel-body chat scrollspy-chat-pane">
+        <div class="panel-body chat scrollspy-chat-pane" data-offset="6" data-spy="scroll"
+             data-target="#navbar-example2">
             <div class="well">
                 <div class="alert alert-success" role="alert">
                     <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
