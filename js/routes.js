@@ -43,11 +43,7 @@ function customerLogin() {
             }
         },
         function () {
-            var accounts_socketInit_locale = "zh_CN";
-            var accounts_socketInit_device = "ios";
-            var accounts_socketInit_version = "1.0.0"
-            var accounts_socketInit_mobile = "web"
-            socketInit(accounts_socketInit_locale, accounts_socketInit_device, accounts_socketInit_version, accounts_socketInit_mobile);
+            socketInit("zh_CN", "ios", "1.0.0", "web");
         }
     );
 }
