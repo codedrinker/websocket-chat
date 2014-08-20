@@ -11,20 +11,39 @@
     <link rel="stylesheet" href="../stylesheets/login.css">
     <link rel="stylesheet" href="../stylesheets/profile.css">
 
-    <!--bootstarp-->
-    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="../plugins/bootstrap/3.2.0/js/bootstrap.js"></script>
-    <script src="../plugins/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
     <!--jquery-->
     <script src="../plugins/jquery/1.0.2/jquery.js"></script>
 
+    <!--bootstarp-->
+    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!--<script src="../plugins/bootstrap/3.2.0/js/bootstrap.js"></script>-->
+    <script src="../plugins/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--<script src="../plugins/doc/js/docs.min.js"></script>-->
+
+    <link rel="stylesheet" href="../plugins/doc/css/docs.min.css">
 
     <!--spin-->
     <script src="../plugins/spin/2.0.1/spin.js"></script>
     <script src="../plugins/spin/2.0.1/spin.min.js"></script>
-s
+
+    <!--service-->
+
+    <script src="../js/config/initCore.js"></script>
+    <script src="../js/util/util.js"></script>
+    <script src="../js/dao/dao.js"></script>
+    <script src="../js/config/config.js"></script>
+
+    <script src="../js/service/accountService.js"></script>
+    <script src="../js/service/snsService.js"></script>
+    <script src="../js/service/discoverService.js"></script>
+    <script src="../js/service/relationshipService.js"></script>
+    <script src="../js/service/mobileService.js"></script>
+    <script src="../js/service/infoService.js"></script>
+    <script src="../js/service/systemService.js"></script>
+
+    <script src="../js/view/viewer.js"></script>
+    <script src="../js/routes.js"></script>
 
 </head>
 <body>
@@ -36,10 +55,14 @@ s
             <div class="account-wall">
                 <img class="profile-img" src="../image/logo.jpg">
 
-                <form class="form-signin" action="index.html">
-                    <input name="login_uid" type="text" class="form-control" placeholder="login_uid" required autofocus>
-                    <input name="access_token" type="password" class="form-control" placeholder="access_token" required>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                <form class="form-signin">
+                    <input name="login_uid" type="text" class="form-control" placeholder="login_uid"
+                           value="u" id="customer_login_type" required> <!--autofocus-->
+                    <input name="login_uid" type="text" class="form-control" placeholder="login_uid"
+                           value="1234567890" id="customer_login_id" required> <!--autofocus-->
+                    <input name="access_token" type="password" class="form-control" value="0123456789"
+                           placeholder="access_token" id="customer_login_token" required>
+                    <button class="btn btn-lg btn-primary btn-block" onclick="customerLogin();">
                         Sign in
                     </button>
                     <label class="checkbox pull-left">

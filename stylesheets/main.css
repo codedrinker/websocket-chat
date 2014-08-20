@@ -63,12 +63,22 @@ body {
 .noopacity {
     background-color: transparent;
     color: #fff;
-}s
+}
 
+s
 .menu {
     width: 18px;
     height: 18px;
 }
+
 .mag-top {
     margin-top: 40px;
+}
+
+.mag-right {
+    margin-right: 20px;
+}
+
+.mag-left {
+    margin-left: 40px;
 }

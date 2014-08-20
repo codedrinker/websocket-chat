@@ -2,12 +2,15 @@
  * Created by primos on 14-8-20.
  */
 
+/*function alert_msg(typz, content, msg) {
+ $("#chat_pane").append("<div class='alert " + typz + "' role='alert'>" +
+ "<strong>" + content + ":</strong><br>" + msg +
+ "<button type='button' class='close' data-dismiss='alert'>" +
+ "<span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>" +
+ "</div>")
+ }*/
 function alert_msg(typz, content, msg) {
-    $("#chat_pane").append("<div class='alert " + typz + "' role='alert'>" +
-        "<strong>" + content + ":</strong><br>" + msg +
-        "<button type='button' class='close' data-dismiss='alert'>" +
-        "<span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>" +
-        "</div>")
+    console.log(content + ":" + msg);
 }
 
 function sendMsg(msg) {
