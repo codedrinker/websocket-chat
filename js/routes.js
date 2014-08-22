@@ -50,41 +50,31 @@ function reconnect(wsUrl) {
     wsp = makeWSProxy(wsUrl);
 }
 
+
+function pollingForward() {
+    var image = $("body").css("background-image")
+    var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) + 1) % 9
+    $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
+}
+
+function pollingBack() {
+    var image = $("body").css("background-image")
+    var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) - 1 + 9) % 9
+    $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
+}
+
 function polling() {
     setInterval(function () {
         pollingForward();
     }, 20000);
 }
 
-function setPaneHeight(id, pir) {
-    var height = $(window).height();
-    var h = (parseInt(height) * pir) + "px";
-    $("#return-alert").css("height", h)
-    $("#message").css("height", h)
-}
-
-function initPanePosition() {
-    var height = $(window).height();
-    var h = (parseInt(height) * 0.7) + "px";
-    $("#head_float_pane").css("height", h)
-    $("#menu_float_pane").css("height", h)
-    $("#chat_float_pane").css("height", h)
-    $("#return-alert").css("height", h)
-    $("#message").css("height", h)
-}
-
 /**
  * 初始化数据
  */
 function init() {
-    connect();
-    registerMachine();
-    polling();
-    initPanePosition();
-}
-/**
- * 注册机,其实这里主要是注册其他模块的一些模板,具体的模块注册再每一个注册机里面
- */
-function registerMachine() {
     register();
+    connect();
+    polling();
+    layoutInitializator();
 }

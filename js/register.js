@@ -16,7 +16,6 @@
  */
 function acviteRegistor(registerId, registerName) {
     addActiveNavigator(registerId, registerName)//定义navigator
-    setMenuPaneHeight(registerId)
     addActivePane(registerId);//定义pane
     loadHtml(registerId, "modules/" + registerId + ".html")//load模块
 }
@@ -26,7 +25,6 @@ function acviteRegistor(registerId, registerName) {
  */
 function visiableRegistor(registerId, registerName) {
     addNavigator(registerId, registerName)//定义navigator
-    setMenuPaneHeight(registerId)
     appendPane(registerId);//定义pane
     loadHtml(registerId, "modules/" + registerId + ".html")//load模块
 }
@@ -36,7 +34,6 @@ function visiableRegistor(registerId, registerName) {
  */
 function foldRegistor(registerId, registerName) {
     appendNavigator(registerId, registerName)//定义navigator
-    setMenuPaneHeight(registerId)
     appendPane(registerId);//定义pane
     loadHtml(registerId, "modules/" + registerId + ".html")//load模块
 }
@@ -44,9 +41,7 @@ function foldRegistor(registerId, registerName) {
 
 function register() {
     visiableRegistor("contacts", "通讯录");
-
     acviteRegistor("message", "消息");
-
     foldRegistor("moments", "朋友圈")
     foldRegistor("notifications", "通知")
 }
