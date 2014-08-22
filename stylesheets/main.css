@@ -3,7 +3,7 @@ body {
     font-family: "Open Sans", serif;
     background: transparent;
     /*background-color: #6B747A !important;*/
-    background-image: url("../image/static/2.1.jpg");
+    background-image: url("../image/res/bg0.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -41,22 +41,20 @@ body {
 
 .scrollspy-pane {
     position: relative;
-    height: 400px;
     margin-top: 10px;
     overflow: auto;
 }
 
 .scrollspy-chat-pane {
     position: relative;
-    height: 386px;
     margin-top: 10px;
     overflow: auto;
 }
 
 .opacity {
-    -moz-opacity: 0.1; /* FF 3.5以下 */
-    opacity: 0.1; /* FF 3.5及以上 */
-    filter: alpha(opacity=10); /* IE6及以上 */
+    -moz-opacity: 0.85; /* FF 3.5以下 */
+    opacity: 0.85; /* FF 3.5及以上 */
+    filter: alpha(opacity=85); /* IE6及以上 */
     background: #fff;
 }
 
@@ -65,7 +63,6 @@ body {
     color: #fff;
 }
 
-s
 .menu {
     width: 18px;
     height: 18px;
@@ -80,5 +77,9 @@ s
 }
 
 .mag-left {
-    margin-left: 40px;
+    margin-left: 45%;
+}
+
+.mag-left_m {
+    margin-left: 50px;
 }

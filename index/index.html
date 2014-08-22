@@ -27,9 +27,7 @@
     <script src="../plugins/spin/2.0.1/spin.js"></script>
     <script src="../plugins/spin/2.0.1/spin.min.js"></script>
 
-
     <!--service-->
-
     <script src="../js/config/initCore.js"></script>
     <script src="../js/util/util.js"></script>
     <script src="../js/dao/dao.js"></script>
@@ -42,18 +40,22 @@
     <script src="../js/service/mobileService.js"></script>
     <script src="../js/service/infoService.js"></script>
     <script src="../js/service/systemService.js"></script>
-
     <script src="../js/view/viewer.js"></script>
     <script src="../js/routes.js"></script>
+    <script src="../js/controller.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="../js/extractor.js"></script>
+
 </head>
-<body>
+<body onload="init()">
 <!--start account line-->
-<div class="col-sm-6 col-md-1 mag-top">
+<div class="col-sm-6 col-md-1 mag-top" id="head_float_pane">
     <p><img src="../image/headref.jpg" class="img-circle img-thumbnail cur userref mag-left"></p>
 
     <p><img src="../image/qq.png" class="img-circle img-thumbnail cur userref mag-left"></p>
 
-    <p><img src="../image/add.jpg" class="img-circle img-thumbnail cur userref mag-left" data-toggle="modal" href="login.html"s
+    <p><img src="../image/add.jpg" class="img-circle img-thumbnail cur userref mag-left" data-toggle="modal"
+            href="login.html" s
             data-target=".bs-example-modal-sm"></p>
 </div>
 <!--start login dialog-->
@@ -82,34 +84,28 @@
 <!--stop login dialog-->
 <!--stop account line-->
 <!--start option list-->
-<div class="col-sm-6 col-md-4 mag-top">
-<div class="panel panel-primary">
+<div class="col-sm-6 col-md-3 mag-top" id="menu_float_pane">
+<div class="panel panel-info opacity">
 <!--start title menu-->
 <div class="panel-heading">
     <div class="panel-title">KeeeWeee
         <span class="pull-right glyphicon glyphicon-cog cur menu"></span>
         <span class="pull-right glyphicon glyphicon-edit cur menu">&nbsp;</span>
         <span class="pull-right glyphicon glyphicon-search cur menu">&nbsp;</span>
-        <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-         <ul class="dropdown-menu" role="menu">
-             <li><a href="#setting" role="tab" data-toggle="tab">设置</a></li>
-             <li><a href="#logout" role="tab" data-toggle="tab">退出</a></li>
-             <li><a href="#createChat" role="tab" data-toggle="tab" onclick="showspin('createChat')">创建会话</a></li>
-         </ul>-->
     </div>
 </div>
 <!--stop title menu-->
 <div class="panel-body">
-<ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#message" role="tab" data-toggle="tab">消息 <span class="badge">12</span></a>
-    </li>
+<ul class="nav nav-tabs" role="tablist" id="navigator">
+    <!--  <li class="active">
+          <a href="#message" role="tab" data-toggle="tab">消息 <span class="badge">12</span></a>
+      </li>-->
     <li>
         <a href="#contacts" role="tab" data-toggle="tab">好友 <span class="badge">6</span></a>
     </li>
-    <li class="dropdown">
+    <li class="dropdown" id="navigator_li">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">更多<span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu">
+        <ul class="dropdown-menu" role="menu" id="navigator_li_ul">
             <li>
                 <a href="#moments" role="tab" data-toggle="tab">朋友圈 <span class="badge">1</span>
                 </a>
@@ -126,87 +122,11 @@
     </li>
 </ul>
 <!--start tab content-->
-<div class="tab-content">
+<div class="tab-content" id="show_pane">
 <!--start message pane-->
-<div class="list-group mt tab-pane fade in active scrollspy-pane" id="message">
-    <a href="#" class="list-group-item" role="alert">
-        <img src="../image/user2.jpg" class="img-circle visref">&nbsp;&nbsp;薇薇
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item active">
-        <img src="../image/group.jpg" class="img-circle visref">&nbsp;&nbsp;KeeeWeee(北京)
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/tianweisong.jpg" class="img-circle visref">&nbsp;&nbsp;田伟松
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/maguokai.jpg" class="img-circle visref">&nbsp;&nbsp;马国凯
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/xiaozhao.jpg" class="img-circle visref">&nbsp;&nbsp;小招
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/huaqiao.jpg" class="img-circle visref">&nbsp;&nbsp;化桥
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/user1.jpg" class="img-circle visref">&nbsp;&nbsp;chrisstyle
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/maguokai.jpg" class="img-circle visref">&nbsp;&nbsp;马国凯
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/xiaozhao.jpg" class="img-circle visref">&nbsp;&nbsp;小招
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/huaqiao.jpg" class="img-circle visref">&nbsp;&nbsp;化桥
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-    <a href="#" class="list-group-item">
-        <img src="../image/user1.jpg" class="img-circle visref">&nbsp;&nbsp;chrisstyle
-        <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-        </button>
-    </a>
-</div>
+<!--<div class="list-group mt tab-pane fade in active scrollspy-pane" id="message">
+
+</div>-->
 <!--stop message pane-->
 <!--start contacts pane-->
 <div class="panel-group mt tab-pane fade scrollspy-pane" id="contacts">
@@ -486,8 +406,8 @@
 <!--stop option list-->
 
 <!--start chat window-->
-<div class="col-sm-6 col-md-7 mag-top">
-    <div class="panel panel-primary">
+<div class="col-sm-6 col-md-7 mag-top" id="chat_float_pane">
+    <div class="panel panel-info opacity">
         <!--start chat window title-->
         <div class="panel-heading txt">
             与 chrisstyle 交谈中
@@ -496,8 +416,8 @@
         </div>
         <!--stop chat window title-->
         <!--start chat window panel-->
-        <div class="panel-body chat">
-            <div class="well scrollspy-chat-pane" data-offset="6" data-spy="scroll" id="chat_pane"
+        <div class="panel-body chat" id="chat_return_alert">
+            <div class="well scrollspy-chat-pane" data-offset="6" data-spy="scroll" id="return-alert"
                  data-target="#chat_pane">
                 <div class="alert alert-success" role="alert">
                     <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
@@ -577,5 +497,11 @@
     </div>
 </div>
 <!--stop chat window-->
+<footer class="mag-left_m">
+    <span class="pull-left glyphicon glyphicon-circle-arrow-left cur menu" onclick="pollingBack();"
+          title="切换到上一张图片">&nbsp;</span>
+    <span class="pull-left glyphicon glyphicon-circle-arrow-right cur menu" onclick="pollingForward();"
+          title="切换到下一张图片"></span>
+</footer>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bootstrap_websocket_chat.iml" filepath="$PROJECT_DIR$/.idea/bootstrap_websocket_chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/websocket_chat.iml" filepath="$PROJECT_DIR$/.idea/websocket_chat.iml" />
     </modules>
   </component>
 </project>

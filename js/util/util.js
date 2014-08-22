@@ -1,3 +1,7 @@
+function log(obj) {
+    console.log(obj);
+}
+
 function echo(s) {
     document.writeln(s + "<br/>");
 }
@@ -15,13 +19,6 @@ function baseMsgBlock(msg, color) {
 
 function msgBlock(msg) {
     baseMsgBlock(msg, "#A6D4F2")
-}
-function debugMsgBlock(msg) {
-    baseMsgBlock(msg, "#E3E7EE")
-}
-
-function sendMsgBlock(msg) {
-    baseMsgBlock(msg, "#F9E8A6")
 }
 
 function redFail(title) {

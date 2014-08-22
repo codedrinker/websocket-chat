@@ -191,6 +191,7 @@ function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
     };
     websocket.onmessage = function (evt) {
         replyMsg(evt.data);
+        console.log(evt.data);
         var json = toJson(evt.data)
         if (json.h != undefined && json.h.s == undefined) {
             if (onmsg) {

@@ -20,3 +20,18 @@ function setMobileUserInfoFn(otherId, username, headRef) {
         m: "更新手机用户资料"
     });
 }
+
+function obtainMobleFn(locale, phoneNumber, areaCode, typz) {
+    var locale = getValueById("obtain_mobile_locale")
+    var phoneNumber = getValueById("obtain_mobile_phone")
+    var areaCode = getValueById("obtain_mobile_areacode")
+    var typz = getValueById("obtain_mobile_type")
+    wsp.mobileObtainCode(locale, phoneNumber, areaCode, typz, "测试登陆");
+}
+
+function verifyObtainCode(captcha, typz) {
+    var captcha = getValueById("verify_obtain_code_captcha")
+    var typz = getValueById("verify_obtain_code_typz")
+    wsp.mobileObtainCodeVerify(captcha, typz, "验证验证码是否正确");
+}
+
