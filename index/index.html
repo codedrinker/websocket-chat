@@ -43,6 +43,7 @@
 </head>
 <body onload="init()">
 <!--start account line-->
+<div class="col-sm-6 col-md-1 mag-top"></div>
 <div class="col-sm-6 col-md-1 mag-top" id="head_float_pane">
     <img src="../image/headref.jpg" class="img-circle img-thumbnail cur userref mag-left">
     <img src="../image/qq.png" class="img-circle img-thumbnail cur userref mag-left">
@@ -75,7 +76,7 @@
 <!--stop login dialog-->
 <!--stop account line-->
 <!--start option list-->
-<div class="col-sm-6 col-md-4 mag-top" id="menu_float_pane">
+<div class="col-sm-6 col-md-3 mag-top" id="menu_float_pane">
     <div class="panel panel-info opacity">
         <!--start title menu-->
         <div class="panel-heading">
@@ -237,11 +238,14 @@
           title="切换到上一张图片">&nbsp;</span>
     <span class="pull-left glyphicon glyphicon-circle-arrow-right cur menu" onclick="pollingForward();"
           title="切换到下一张图片"></span>
+    <span class="pull-left glyphicon glyphicon-exclamation-sign cur menu" onclick="alert('谢谢您的反馈');"
+          title="切换到下一张图片"></span>
+
 </div>
 <!--stop option list-->
 
 <!--start chat window-->
-<div class="col-sm-6 col-md-7 mag-top" id="chat_float_pane">
+<div class="col-sm-6 col-md-6 mag-top" id="chat_float_pane">
     <div class="panel panel-info opacity">
         <!--start chat window title-->
         <div class="panel-heading txt">

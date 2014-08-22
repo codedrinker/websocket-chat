@@ -50,31 +50,11 @@ function reconnect(wsUrl) {
     wsp = makeWSProxy(wsUrl);
 }
 
-
-function pollingForward() {
-    var image = $("body").css("background-image")
-    var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) + 1) % 9
-    $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
-}
-
-function pollingBack() {
-    var image = $("body").css("background-image")
-    var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) - 1 + 9) % 9
-    $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
-}
-
-function polling() {
-    setInterval(function () {
-        pollingForward();
-    }, 20000);
-}
-
 /**
  * 初始化数据
  */
 function init() {
     register();
     connect();
-    polling();
     layoutInitializator();
 }
