@@ -43,16 +43,10 @@ function foldRegistor(registerId, registerName) {
 
 
 function register() {
-    visiableRegistor("mobile", "手机")
-    visiableRegistor("accounts", "账号");
+    visiableRegistor("contacts", "通讯录");
 
     acviteRegistor("message", "消息");
 
-    //FIXME:新添加的在下面依次添加
-    /*    foldRegistor("relationship", "关系");
-     foldRegistor("moments", "朋友圈")
-     foldRegistor("chat", "会话")
-     foldRegistor("sns", "社交")
-     foldRegistor("discover", "广场")
-     foldRegistor("localinfo", "本站资料")*/
+    foldRegistor("moments", "朋友圈")
+    foldRegistor("notifications", "通知")
 }
