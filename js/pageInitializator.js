@@ -30,8 +30,8 @@ function layoutInitializator() {
     heightFn("moments", 0.68);
     heightFn("return-alert", 0.658);
     //设置布局div的margin-top
-    margin_top("head_float_pane", 0.04);
-    margin_top("menu_float_pane", 0.04);
-    margin_top("chat_float_pane", 0.04);
+    margin_top("head_float_pane", 0.05);
+    margin_top("menu_float_pane", 0.05);
+    margin_top("chat_float_pane", 0.05);
 }
 

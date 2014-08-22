@@ -3,7 +3,7 @@ body {
     font-family: "Open Sans", serif;
     background: transparent;
     /*background-color: #6B747A !important;*/
-    background-image: url("../image/res/bg0.jpg");
+    background-image: url("../image/res/bg1.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -52,9 +52,9 @@ body {
 }
 
 .opacity {
-    -moz-opacity: 0.85; /* FF 3.5以下 */
-    opacity: 0.85; /* FF 3.5及以上 */
-    filter: alpha(opacity=85); /* IE6及以上 */
+    -moz-opacity: 0.90; /* FF 3.5以下 */
+    opacity: 0.90; /* FF 3.5及以上 */
+    filter: alpha(opacity=90); /* IE6及以上 */
     background: #fff;
 }
 
@@ -81,5 +81,5 @@ body {
 }
 
 .mag-left_m {
-    margin-left: 50px;
+    margin-left: 10px;
 }
