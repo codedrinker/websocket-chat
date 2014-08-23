@@ -33,6 +33,10 @@ function clearMsg() {
     $("#return-alert").empty();
 }
 
+function closeChat() {
+    $("#chat_float_pane").empty();
+}
+
 function appendHtml(id, html) {
     $("#" + id).append(html);
 }
