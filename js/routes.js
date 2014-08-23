@@ -23,21 +23,27 @@ function customerLogin() {
     );
 }
 
+function beBind() {
+    bindFn("1404796754", "i", strToArr("1404796754.7e10326.094011dc2e964942a98461bbb334b36c"));
+}
 /**
  * 加载网页的时候连接socket,做相关初始化
  */
 function connect() {
     if (autoBind)
-        wsp = makeWSProxy(wsUrl, function (evt) {
-                extractor(evt);
+        wsp = makeWSProxy(wsUrl2, function (evt) {
+//                extractor(evt);
             },
             function () {
-                socketInit(true);
+                wsp.initSocket("ios", "zh_CN", "1.0.0", "primos-pc", {
+                    auto: true,
+                    m: "版本初始化"
+                });
             }
         )
         ;
     else
-        wsp = makeWSProxy(wsUrl, function (evt) {
+        wsp = makeWSProxy(wsUrl2, function (evt) {
             extractor(evt);
         })
 }

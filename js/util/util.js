@@ -1,5 +1,6 @@
 function log(obj) {
-    console.log(obj);
+    if (openLog)
+        console.log(obj);
 }
 
 function echo(s) {

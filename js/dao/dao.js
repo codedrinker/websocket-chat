@@ -9,7 +9,7 @@ function wsSend(websocket, json) {
         }
     json.m["t"] = new Date().getTime()
     var sendStr = JSON.stringify(json);
-    sendMsg(sendStr);
+    log(sendStr);
     websocket.send(sendStr);
 }
 
@@ -168,39 +168,32 @@ function doLogSendReq(actionName, ws, params, mark) {
 
 function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
     var beginShakingTime = (new Date());
-    infoMsg("开始连接服务器 " + beginShakingTime.format("yyyy-MM-dd hh:mm:ss.S"))
+    log("开始连接服务器 " + beginShakingTime.format("yyyy-MM-dd hh:mm:ss.S"))
     var websocket = (new WebSocket(url));
     var ws = websocket;
     websocket.onopen = function (evt) {
         var endShakingTime = (new Date());
-        infoMsg("服务器连接成功 " + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
+        log("服务器连接成功 " + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
         if (onopen) {
             var timecost = endShakingTime.getTime() - beginShakingTime.getTime();
-            if (timecost < 3000)
-                warningMsg(timecost)
-            else
-                dangerMsg(timecost)
-
+            log(timecost)
             onopen(evt);
         }
     };
     websocket.onclose = function (evt) {
-        dangerMsg('*close' + evt.data + "time:" + (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
+        log('*close' + evt.data + "time:" + (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
         if (onclose)
             onclose(evt);
     };
     websocket.onmessage = function (evt) {
-        replyMsg(evt.data);
-        console.log(evt.data);
+        extractor(evt);
+        log(evt.data);
         var json = toJson(evt.data)
         if (json.h != undefined && json.h.s == undefined) {
             if (onmsg) {
                 if (json.h.m != undefined & json.h.m.t != undefined) {
                     var timecost = new Date().getTime() - json.h.m.t
-                    if (timecost < 1000)
-                        warningMsg(timecost)
-                    else
-                        dangerMsg(timecost)
+                    log(timecost)
                 }
                 onmsg(evt);
             }
@@ -210,7 +203,7 @@ function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
 
     };
     websocket.onerror = function (evt) {
-        dangerMsg("*error " + evt.data + "time:" + (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
+        log("*error " + evt.data + "time:" + (new Date()).format("yyyy-MM-dd hh:mm:ss.S"));
         if (onerror)
             onerror(evt);
     };

@@ -80,3 +80,8 @@ function appendPane(id) {
 function addActivePane(id) {
     prependHtml("show_pane", "<div class='panel-group mt tab-pane fade in active scrollspy-pane' data-offset='6' data-spy='scroll' id='" + id + "'>");
 }
+
+
+function floatAccountViewer(id, name, head) {
+    $("#head_float_pane").prepend("<img title='" + name + "' id='" + id + "' src='" + head + "' class='userref img-circle img-thumbnail cur mag-left'>")
+}
