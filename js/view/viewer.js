@@ -85,3 +85,15 @@ function addActivePane(id) {
 function floatAccountViewer(id, name, head) {
     $("#head_float_pane").prepend("<img title='" + name + "' id='" + id + "' src='" + head + "' class='userref img-circle img-thumbnail cur mag-left'>")
 }
+
+function contactsListViewer(id, name, head) {
+    $("#contact_list").prepend("<a href='#' id='" + id + "' sdata-toggle='modal' data-target='#profile_details' onclick='chatWith('" + id + "','" + name + "')' class='list-group-item'><img src='" + head + "' class='img-circle visref'>&nbsp;&nbsp;" + name + "</a>")
+}
+
+function logout() {
+    window.location.href("login.html");
+}
+
+function chatWith(id, name) {
+    $("#chat_float_pane").load("modules/chat.html");
+}

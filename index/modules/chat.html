@@ -1,0 +1,27 @@
+<div class="panel panel-info opacity">
+    <!--start chat window title-->
+    <div class="panel-heading txt">
+        与 targetName 交谈中
+        <span class="pull-right glyphicon glyphicon-off cur menu" onclick="closeChat();">&nbsp;</span>
+        <span class="pull-right glyphicon glyphicon-trash cur menu" onclick="clearMsg();">&nbsp;</span>
+        <span class="pull-right glyphicon glyphicon-cog cur menu"></span>
+    </div>
+    <!--stop chat window title-->
+    <!--start chat window panel-->
+    <div class="panel-body chat" id="chat_return_alert">
+        <div class="well scrollspy-chat-pane" data-offset="6" data-spy="scroll" id="return-alert"
+             data-target="#chat_pane">
+        </div>
+        <p>
+
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="输入要发送的内容">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" data-placement="left" title="发送"
+                                            onclick="sendMsg('targetId')">发送
+                                    </button>
+								</span>
+        </div>
+        </p>
+    </div>
+</div>

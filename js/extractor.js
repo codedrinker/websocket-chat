@@ -20,6 +20,15 @@ function extractor(evt) {
                 for (var index in accounts) {
                     floatAccountViewer(accounts[index].id, accounts[index].n, accounts[index].h)
                 }
+                wsp.initTrustContact("list");
+            }
+        }
+        else if (json.h["p0"] == "trustContact") {
+            if (json.h["p1"] == "init") {
+                var contacts = json.r.info.u
+                for (var index in contacts) {
+                    contactsListViewer(index, contacts[index].info.n, contacts[index].info.h)
+                }
             }
         }
     } else {
@@ -29,7 +38,12 @@ function extractor(evt) {
 
 function handleError(json) {
     if (json.e) {
+        var err = json.e["c"]
         if (json.e["c"] == "205005")
             alert("缺啥参数")
+        else if (err == "200002") {
+            logout();
+        }
+
     }
 }
