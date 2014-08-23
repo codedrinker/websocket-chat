@@ -23,25 +23,46 @@ function margin_top(id, pier) {
 
 
 function backgroundFn() {
-    $("body").css("background-image", "url('../image/res/bg1.jpg')");
+    $("body").css("background-image", "url('../image/res/11.jpg')");
 }
 
+/*function pollingForward() {
+ var image = $("body").css("background-image")
+ var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) + 1) % 16
+ log(index)
+ $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
+ }
+
+ function pollingBack() {
+ var image = $("body").css("background-image")
+ var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) - 1 + 16) % 16
+ log(index)
+ $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
+ }*/
 function pollingForward() {
     var image = $("body").css("background-image")
-    var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) + 1) % 9
-    $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
+    var index = (parseInt(image.substring(image.indexOf(".") - 2).substring(0, 2)) + 1)
+    if (index >= 26) index = 11
+    log(index)
+    $("body").css("background-image", "url('../image/res/" + index + ".jpg')");
 }
 
 function pollingBack() {
     var image = $("body").css("background-image")
-    var index = (parseInt(image.substring(image.indexOf(".") - 1).substring(0, 1)) - 1 + 9) % 9
-    $("body").css("background-image", "url('../image/res/bg" + index + ".jpg')");
+    var index = ( parseInt(image.substring(image.indexOf(".") - 2).substring(0, 2)) - 1)
+    if (index <= 10) index = 25
+    log(index)
+    $("body").css("background-image", "url('../image/res/" + index + ".jpg')");
 }
 
 function polling() {
-    setInterval(function () {
-        pollingForward();
-    }, 10000);
+    if (autoPolling)
+        setInterval(function () {
+            pollingForward();
+        }, 20000);
+}
+function stopPolling() {
+    window.autoPolling = false;
 }
 
 
