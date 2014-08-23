@@ -61,10 +61,6 @@ function polling() {
             pollingForward();
         }, 20000);
 }
-function stopPolling() {
-    window.autoPolling = false;
-}
-
 
 function layoutInitializator() {
     //设置背景图片
@@ -80,6 +76,6 @@ function layoutInitializator() {
     margin_top("menu_float_pane", 0.05);
     margin_top("chat_float_pane", 0.05);
 
-    polling();
+    /*  polling();*/
 }
 
