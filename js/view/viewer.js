@@ -19,7 +19,7 @@ function sendMsg(msg) {
             "<span class='sr-only'>Close</span></button></div>" +
             "<div class='col-md-2'>" +
             "<img src='../image/headref.jpg' id='f:2'' onmouseover='showSocialIcons(this)" +
-            "onmouseout='hiddenSocialIcons(this)' class='img-circle chatref cur pull-right" +
+            "onmouseout='hiddenSocialIcons(this)' class='img-circle chatref cur pull-right " +
             "title='Primos'>" +
             "</div></div>"
     )
