@@ -70,7 +70,7 @@ function layoutInitializator() {
     heightFn("notifications", 0.68);
     heightFn("contacts", 0.68);
     heightFn("moments", 0.68);
-    heightFn("return-alert", 0.658);
+    heightFn("return-alert", 0.6745);
     //设置布局div的margin-top
     margin_top("head_float_pane", 0.05);
     margin_top("menu_float_pane", 0.05);

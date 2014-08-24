@@ -238,9 +238,6 @@
           title="切换到上一张图片">&nbsp;</span>
     <span class="pull-left glyphicon glyphicon-circle-arrow-right cur menu" onclick="pollingForward();"
           title="切换到下一张图片"></span>
-    <!--
-    <span class="pull-left glyphicon glyphicon-stop cur menu" onclick="ifPolling(false);"
-          title="停止自动切换背景图片"></span>-->
     <span class="pull-left glyphicon glyphicon-exclamation-sign cur menu" onclick="alert('谢谢您的反馈');"
           title="切换到下一张图片"></span>
 
@@ -254,19 +251,76 @@
         <div class="panel-heading txt">
             与 chrisstyle 交谈中
             <span class="pull-right glyphicon glyphicon-off cur menu" onclick="closeChat();">&nbsp;</span>
-            <span class="pull-right glyphicon glyphicon-trash cur menu" onclick="clearMsg();">&nbsp;</span>
-            <span class="pull-right glyphicon glyphicon-cog cur menu"></span>
+            <span class="pull-left glyphicon glyphicon-trash cur menu" onclick="clearMsg();">&nbsp;</span>
+            <!--<span class="pull-right glyphicon glyphicon-cog cur menu"></span>-->
         </div>
         <!--stop chat window title-->
         <!--start chat window panel-->
         <div class="panel-body chat" id="chat_return_alert">
             <div class="well scrollspy-chat-pane" data-offset="6" data-spy="scroll" id="return-alert"
                  data-target="#chat_pane">
-                <div class="alert alert-success" role="alert">
-                    <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
-                    chrisstyle:</strong></a>你在干嘛？
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>
+
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <img src="../image/user1.jpg" class="img-circle chatref cur" title="chrisstyle">
+                    </div>
+                    <div class="col-md-10 alert alert-success" role="alert">
+                        你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛
+                        ？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-10 alert alert-info" role="alert">
+                        你在干嘛？
+                        ？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="../image/headref.jpg" class="img-circle chatref cur pull-right " title="Primos">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <img src="../image/user1.jpg" class="img-circle chatref cur " title="chrisstyle">
+                    </div>
+                    <div class="col-md-10 alert alert-success" role="alert">
+                        你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛
+                        ？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-10 alert alert-info" role="alert">
+                        你在干嘛？
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="../image/headref.jpg" class="img-circle chatref cur pull-right" title="Primos">
+                    </div>
+                </div>
+
+                <!--
+                                <div class="alert alert-success" role="alert">
+                                    <img src="../image/user1.jpg" class="img-circle visref"><a href="#"><strong>
+                                    chrisstyle:</strong></a>你在干嘛？
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button>
                 </div>
@@ -322,19 +376,34 @@
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button>
+                </div>-->
+            </div>
+            <div class="col-md-3">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-flash"></span>
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-dashboard"></span>
+                    </button>
                 </div>
             </div>
-            <p>
-
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="输入要发送的内容">
-								<span class="input-group-btn">
-									<button class="btn btn-primary" type="button" data-placement="left" title="发送"
-                                            onclick="sendMsg('嗨')">发送
-                                    </button>
-								</span>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="输入要发送的内容">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button" data-placement="left" title="发送"
+                                onclick="sendMsg('嗨')">
+                            <span class="pull-right glyphicon glyphicon-send cur send">&nbsp;</span>
+                        </button>
+                    </span>
+                </div>
             </div>
             </p>
+
         </div>
         <!--stop chat window panel-->
     </div>

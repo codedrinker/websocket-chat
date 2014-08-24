@@ -68,6 +68,11 @@ body {
     height: 18px;
 }
 
+.send {
+    width: 20px;
+    height: 20px;
+}
+
 .mag-top {
     margin-top: 40px;
 }
