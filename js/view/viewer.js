@@ -93,6 +93,47 @@ function contactsListViewer(id, name, head) {
         "<img id='" + id + ":img" + "' onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)'  src='" + head + "' class='img-circle visref'>&nbsp;&nbsp;" + name + "</a>")
 }
 
+function momentsListViewer(user_id, user_name, user_head, moments_id, moments_type, moments_content, moments_time, moments_count, moments_likes, moments_pic) {
+    if (moments_type == 1)
+        var image = "<a class='pull-left' href='#' id='" + moments_id + "'>" +
+            "<img class='media-object img-thumbnail' data-src='holder.js/128x64' alt='128x64'" +
+            "src='" + moments_pic + "' style='width: 128px; height: 64px;'>" +
+            "</a>"
+    else
+        image = ""
+    var html = "<li class='list-group-item'>" +
+        "  <ul class='media-list'>" +
+        "        <li class='media'>" +
+        "            <a class='pull-left' href='#' id='" + user_id + "'>" +
+        "               <img onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)' class='media-object img-circle visref' id='" + user_id + ":img" + "' src='" + user_head + "'>" +
+        "                </a>" +
+        "                <div class='media-body'>" +
+        "                    <a href='#'><strong> " + user_name + "</strong></a>" +
+        "                    <span class='pull-right'>" + (new Date(moments_time)).format("yyyy-MM-dd hh:mm:ss.S") + "</span>" +
+        "                </div>" +
+        "            </li>" +
+        "            <li class='media'>" + image +
+        "                   <div class='media-body'>" +
+        "                        <p><a href='#' title='查看内容详情' data-toggle='modal'" +
+        "                        data-target='#moment_details'>" + moments_content + "</a>" +
+        "                        </p>" +
+        "                    </div>" +
+        "                </li>" +
+        "                <li class='media'>" +
+        "                    <div class='pull-left'>" +
+        "                    " + moments_likes + " <strong>likes</strong> ," + moments_count + " <strong>comments</strong>" +
+        "                    </div>" +
+        "                    <div class='media-body pull-right'>" +
+        "                        <a href='#'><img class='liicon' src='../image/assets/icon_heart_grey@2x.png' title='赞'></a>&nbsp;&nbsp;" +
+        "                            <a href='#'><img class='liicon' src='../image/assets/icon_comment_grey.png' title='评论'></a>" +
+        "                            </div>" +
+        "                        </li>" +
+        "                    </ul>" +
+        "                </li>"
+    $("#moments").prepend(html);
+}
+
+
 function logout() {
     window.location.href("login.html");
 }

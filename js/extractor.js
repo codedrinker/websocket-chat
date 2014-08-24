@@ -26,8 +26,20 @@ function extractor(evt) {
         else if (json.h["p0"] == "trustContact") {
             if (json.h["p1"] == "init") {
                 var contacts = json.r.info.u
+                var defaultAccount = ""
                 for (var index in contacts) {
+                    defaultAccount = index
                     contactsListViewer(index, contacts[index].info.n, contacts[index].info.h)
+                }
+                wsp.listStatus2(defaultAccount, "trust", "text&image", 20, "初始化朋友圈")
+            }
+        } else if (json.h["p0"] == "status") {
+            if (json.h["p1"] == "list") {
+                var moments = json.r.info.l
+                var infoObj = json.r.info.b
+                for (var index in moments) {
+                    var moment = moments[index].s
+                    momentsListViewer(moment.u, infoObj[moment.u].n, infoObj[moment.u].h, moment.s, moment.p, moment.c, moment.t, moment.mc, moment.z, moment.i)
                 }
             }
         }
