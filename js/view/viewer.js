@@ -124,13 +124,13 @@ function momentsListViewer(user_id, user_name, user_head, moments_id, moments_ty
         "                    " + moments_likes + " <strong>likes</strong> ," + moments_count + " <strong>comments</strong>" +
         "                    </div>" +
         "                    <div class='media-body pull-right'>" +
-        "                        <a href='#'><img class='liicon' src='../image/assets/icon_heart_grey@2x.png' title='赞'></a>&nbsp;&nbsp;" +
-        "                            <a href='#'><img class='liicon' src='../image/assets/icon_comment_grey.png' title='评论'></a>" +
+        "                        <a href='#'><img id='" + moments_id + "-like" + "' status='0' class='liicon' src='../image/assets/hearts/0.png' title='赞' onclick='like(this)'></a>&nbsp;&nbsp;" +
+        "                            <a href='#'><img id='" + moments_id + "-comment" + "' class='liicon' src='../image/assets/icon_comment_grey.png' title='评论'></a>" +
         "                            </div>" +
         "                        </li>" +
         "                    </ul>" +
         "                </li>"
-    $("#moments").prepend(html);
+    $("#moments").append(html);
 }
 
 
@@ -153,4 +153,10 @@ function hiddenSocialIcons(e) {
     var this_id = $(e).attr("id");
     var src1 = $(e).attr("src1");
     $(e).attr("src", src1)
+}
+function like(e) {
+    var status = parseInt($(e).attr("status"));
+    var ns = status ^ 1
+    $(e).attr("status", ns);
+    $(e).attr("src", "../image/assets/hearts/" + ns + ".png");
 }
