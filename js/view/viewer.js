@@ -83,11 +83,14 @@ function addActivePane(id) {
 
 
 function floatAccountViewer(id, name, head) {
-    $("#head_float_pane").prepend("<img title='" + name + "' id='" + id + "' src='" + head + "' class='userref img-circle img-thumbnail cur mag-left'>")
+    $("#head_float_pane").prepend("<img  onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)' title='" + name + "' id='" + id + "' src='" + head + "' class='userref img-circle img-thumbnail cur mag-left'>")
 }
 
 function contactsListViewer(id, name, head) {
-    $("#contact_list").prepend("<a href='#' id='" + id + "' sdata-toggle='modal' data-target='#profile_details' onclick='chatWith('" + id + "','" + name + "')' class='list-group-item'><img src='" + head + "' class='img-circle visref'>&nbsp;&nbsp;" + name + "</a>")
+    if (snsType(id) == TencentWeiboUser)
+        head = head + "/180"
+    $("#contact_list").prepend("<a href='#' id='" + id + "' sdata-toggle='modal' data-target='#profile_details' onclick='chatWith('" + id + "','" + name + "')' class='list-group-item'>" +
+        "<img id='" + id + ":img" + "' onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)'  src='" + head + "' class='img-circle visref'>&nbsp;&nbsp;" + name + "</a>")
 }
 
 function logout() {
@@ -96,4 +99,17 @@ function logout() {
 
 function chatWith(id, name) {
     $("#chat_float_pane").load("modules/chat.html");
+}
+function showSocialIcons(e) {
+    var this_id = $(e).attr("id");
+    var src1 = $(e).attr("src");
+    var src = snsType(this_id) + ".png"
+    $(e).attr("src", "../image/social_icons/" + src)
+    $(e).attr("src1", src1)
+}
+
+function hiddenSocialIcons(e) {
+    var this_id = $(e).attr("id");
+    var src1 = $(e).attr("src1");
+    $(e).attr("src", src1)
 }

@@ -6,6 +6,18 @@ var openLog = true;
 
 var autoPolling = true;
 
+
+var SinaWeiboUser = "s"
+var VKUser = "v"
+var LinkedInUser = "k"
+var FacebookUser = "f"
+var TwitterUser = "t"
+var GooglePlus = "g"
+var InstagramUser = "i"
+var MobileUser = "m"
+var TencentWeiboUser = "q"
+
+
 var chatBatch = false;//开启批量发送对话表示
 
 var language;

@@ -146,6 +146,10 @@ function combineOtherId(platform, id) {
     return platform + ":" + id;
 }
 
+function snsType(otherId) {
+    return otherId.split(":")[0]
+}
+
 // 逗号
 function strToArr(str) {
     var arr = (str + "").split(',');
