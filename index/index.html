@@ -80,7 +80,7 @@
     <div class="panel panel-info opacity">
         <!--start title menu-->
         <div class="panel-heading">
-            <div class="panel-title">KeeeWeee
+            <div class="panel-title"><strong>KeeeWeee</strong>
                 <span class="pull-right glyphicon glyphicon-cog cur menu"></span>
                 <span class="pull-right glyphicon glyphicon-edit cur menu">&nbsp;</span>
                 <span class="pull-right glyphicon glyphicon-search cur menu">&nbsp;</span>
@@ -249,7 +249,7 @@
     <div class="panel panel-info opacity">
         <!--start chat window title-->
         <div class="panel-heading txt">
-            与 chrisstyle 交谈中
+            与 Vivi Young 交谈中
             <span class="pull-right glyphicon glyphicon-off cur menu" onclick="closeChat();">&nbsp;</span>
             <span class="pull-left glyphicon glyphicon-trash cur menu" onclick="clearMsg();">&nbsp;</span>
             <!--<span class="pull-right glyphicon glyphicon-cog cur menu"></span>-->
@@ -262,7 +262,8 @@
 
                 <div class="col-md-12">
                     <div class="col-md-2">
-                        <img src="../image/user1.jpg" class="img-circle chatref cur" title="chrisstyle">
+                        <img src="../image/user2.jpg" id="s:23" onmouseover="showSocialIcons(this)"
+                             onmouseout="hiddenSocialIcons(this)" class="img-circle chatref cur" title="Vivi Young">
                     </div>
                     <div class="col-md-10 alert alert-success" role="alert">
                         你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛
@@ -284,13 +285,16 @@
                         </button>
                     </div>
                     <div class="col-md-2">
-                        <img src="../image/headref.jpg" class="img-circle chatref cur pull-right " title="Primos">
+                        <img src="../image/headref.jpg" id="f:23:1" onmouseover="showSocialIcons(this)"
+                             onmouseout="hiddenSocialIcons(this)" class="img-circle chatref cur pull-right "
+                             title="Primos">
                     </div>
                 </div>
 
                 <div class="col-md-12">
                     <div class="col-md-2">
-                        <img src="../image/user1.jpg" class="img-circle chatref cur " title="chrisstyle">
+                        <img src="../image/user2.jpg" id="s:23:1" onmouseover="showSocialIcons(this)"
+                             onmouseout="hiddenSocialIcons(this)" class="img-circle chatref cur " title="Vivi Young">
                     </div>
                     <div class="col-md-10 alert alert-success" role="alert">
                         你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛？ 你在干嘛
@@ -311,7 +315,9 @@
                         </button>
                     </div>
                     <div class="col-md-2">
-                        <img src="../image/headref.jpg" class="img-circle chatref cur pull-right" title="Primos">
+                        <img src="../image/headref.jpg" id="f:23" onmouseover="showSocialIcons(this)"
+                             onmouseout="hiddenSocialIcons(this)" class="img-circle chatref cur pull-right"
+                             title="Primos">
                     </div>
                 </div>
 
@@ -384,16 +390,16 @@
                         <span class="glyphicon glyphicon-user"></span>
                     </button>
                     <button type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-flash"></span>
+                        <span class="glyphicon glyphicon-picture"></span>
                     </button>
                     <button type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-dashboard"></span>
+                        <span class="glyphicon glyphicon-map-marker"></span>
                     </button>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="输入要发送的内容">
+                    <input type="text" class="form-control" placeholder="输入要发送的内容" id="sendInput">
                     <span class="input-group-btn">
                         <button class="btn btn-info" type="button" data-placement="left" title="发送"
                                 onclick="sendMsg('嗨')">
