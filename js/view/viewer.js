@@ -14,11 +14,9 @@ function sendMsg(msg) {
     var msg = $("#sendInput").val()
     $("#return-alert").append("  <div class='col-md-12'>" +
             "<div class='col-md-10 alert alert-info' role='alert'>" +
-            msg + "<button type='button'' class='close' data-dismiss='alert'>" +
-            "<span aria-hidden='true'>&times;</span>" +
-            "<span class='sr-only'>Close</span></button></div>" +
+            msg + "</div>" +
             "<div class='col-md-2'>" +
-            "<img src='../image/headref.jpg' id='f:2'' onmouseover='showSocialIcons(this)" +
+            "<img src='../image/headref.jpg' id='i:2' onmouseover='showSocialIcons(this)' " +
             "onmouseout='hiddenSocialIcons(this)' class='img-circle chatref cur pull-right " +
             "title='Primos'>" +
             "</div></div>"
