@@ -46,6 +46,13 @@ function closeChat() {
     $("#chat_float_pane").empty();
 }
 
+function showChat() {
+    $("#chat_float_pane").empty();
+    $("#chat_float_pane").load("modules/chatpane.html");
+    heightFn("return-alert", 0.6745);
+//    heightFn("return-alert", 0.6745);
+}
+
 function appendHtml(id, html) {
     $("#" + id).append(html);
 }
