@@ -189,7 +189,7 @@ function like(e) {
  * 输入框有输入内容的时候，发送按钮才能点击，否则不能点击
  */
 function btnEventFn(value) {
-    if (value != "") {
+    if (value.trim() != "") {
         $("#sendMsgBtn").attr("disabled", false)
         $("#sendMsgBtn").attr("class", "btn-info btn")
     } else {
