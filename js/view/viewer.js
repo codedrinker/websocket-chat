@@ -105,8 +105,10 @@ function floatAccountViewer(id, name, head) {
 function contactsListViewer(id, name, head) {
     if (snsType(id) == TencentWeiboUser)
         head = head + "/180"
-    $("#contact_list").prepend("<a href='#' id='" + id + "' sdata-toggle='modal' data-target='#profile_details' onclick='chatWith('" + id + "','" + name + "')' class='list-group-item'>" +
-        "<img id='" + id + ":img" + "' onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)'  src='" + head + "' class='img-circle visref'>&nbsp;&nbsp;" + name + "</a>")
+    $("#contact_list").prepend("<li id='" + id + "  style='position:relative' sdata-toggle='modal' data-target='#profile_details' onclick='chatWith('" + id + "','" + name + "')' class='list-group-item'>" +
+        "<img id='" + id + ":img" + "' onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)'  src='" + head + "' class='img-circle visref'>" +
+        "<img style='margin-top: 19px;margin-left: 0px;position:absolute;left:32px;bottom:5px;' src='http://s3-ap-southeast-1.amazonaws.com/keeeweee.asset/sns/" + snsType(id) + ".png)' height='16px' width='16px'>" +
+        "&nbsp;&nbsp;" + name + "</li>")
 }
 
 function momentsListViewer(user_id, user_name, user_head, moments_id, moments_type, moments_content, moments_time, moments_count, moments_likes, moments_pic) {
