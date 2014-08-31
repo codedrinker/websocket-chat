@@ -46,23 +46,6 @@ function closeChat() {
     $("#chat_float_pane").empty();
 }
 
-function showChat(e) {
-    var chatPaneId = "#return-alert"
-    $(chatPaneId).empty();
-    var chatWithName = $(e).attr("chat_with_name");
-    var chatWithId = $(e).attr("chat_with_id");
-    var account = $("#head_float_pane").children(0)
-    var accounttId = account.attr("id")
-    var accountHead = account.attr("src")
-    $("#chat_with_name").text(chatWithName)
-    $(chatPaneId).attr({
-        chat_with_id: chatWithId,
-        chat_with_name: chatWithName,
-        accounttId: accounttId,
-        accountHead: accountHead
-    });
-}
-
 function appendHtml(id, html) {
     $("#" + id).append(html);
 }
@@ -197,10 +180,38 @@ function btnEventFn(value) {
         $("#sendMsgBtn").attr("class", "btn-default btn")
     }
 }
+
+function showChat(e) {
+    var chatPaneId = "#return-alert"
+    $(chatPaneId).empty();
+    var chatWithName = $(e).attr("chat_with_name");
+    var chatWithId = $(e).attr("chat_with_id");
+    var account = $("#head_float_pane").children(0)
+    var accounttId = account.attr("id")
+    var accountHead = account.attr("src")
+    $("#chat_with_name").text(chatWithName)
+    $(chatPaneId).attr({
+        chat_with_id: chatWithId,
+        chat_with_name: chatWithName,
+        accounttId: accounttId,
+        accountHead: accountHead
+    });
+    wsp.createChatSession(accounttId, [
+        {
+            "p0o": accounttId,
+            "p1f": [chatWithId]
+        }
+    ], "点击会话")
+}
+
 function sendThenClear() {
-    var content = $("#sendInput").val()
+    var chatPaneId = "#return-alert"
+    var accounttId = $(chatPaneId).attr("accounttId");
+    var accountHead = $(chatPaneId).attr("accountHead");
+    var content = $("#sendInput").val();
     sendMsg(content)
-    $("#sendMsgBtn").attr("disabled", true)
-    $("#sendMsgBtn").attr("class", "btn-default btn")
-    $("#sendInput").val("")
+    wsp.chatSendMessage(accounttId, content, 0, "se:i:1404796754~m:8618610611153");
+    $("#sendMsgBtn").attr("disabled", true);
+    $("#sendMsgBtn").attr("class", "btn-default btn");
+    $("#sendInput").val("");
 }
