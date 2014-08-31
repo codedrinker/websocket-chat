@@ -166,7 +166,6 @@ function showSocialIcons(e) {
 }
 
 function hiddenSocialIcons(e) {
-    var this_id = $(e).attr("id");
     var src1 = $(e).attr("src1");
     $(e).attr("src", src1)
 }
@@ -175,4 +174,17 @@ function like(e) {
     var ns = status ^ 1
     $(e).attr("status", ns);
     $(e).attr("src", "../image/assets/hearts/" + ns + ".png");
+}
+
+/**
+ * 输入框有输入内容的时候，发送按钮才能点击，否则不能点击
+ */
+function btnEventFn(value) {
+    if (value != "") {
+        $("#sendMsgBtn").attr("disabled", false)
+        $("#sendMsgBtn").attr("class", "btn-info btn")
+    } else {
+        $("#sendMsgBtn").attr("disabled", true)
+        $("#sendMsgBtn").attr("class", "btn-default btn")
+    }
 }

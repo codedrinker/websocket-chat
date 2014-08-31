@@ -320,9 +320,11 @@
             </div>
             <div class="col-md-9">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="输入要发送的内容" id="sendInput">
+                    <input type="text" class="form-control" placeholder="输入要发送的内容" id="sendInput"
+                           oninput="btnEventFn(this.value);" onpropertychange="btnEventFn(this.value)">
                     <span class="input-group-btn">
-                        <button class="btn btn-info" type="button" data-placement="left" title="发送"
+                        <button id="sendMsgBtn" class="btn btn-default" type="button" data-placement="left" title="发送"
+                                disabled="true"
                                 onclick="sendMsg('嗨')">
                             <span class="pull-right glyphicon glyphicon-send cur send">&nbsp;</span>
                         </button>
