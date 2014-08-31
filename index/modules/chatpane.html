@@ -1,12 +1,17 @@
-<div class="panel panel-info opacity">
+<div class="panel panel-info opacity" id="chat_container"  style="height: 90% ">
+    <!--start chat window title-->
     <div class="panel-heading txt">
-        <span id="chat_target">与 Vivi Young 交谈中</span>
+        与 Vivi Young 交谈中
         <span class="pull-right glyphicon glyphicon-off cur menu" onclick="closeChat();">&nbsp;</span>
         <span class="pull-left glyphicon glyphicon-trash cur menu" onclick="clearMsg();">&nbsp;</span>
+        <!--<span class="pull-right glyphicon glyphicon-cog cur menu"></span>-->
     </div>
-    <div class="panel-body chat" id="chat_return_alert">
+    <!--stop chat window title-->
+    <!--start chat window panel-->
+    <div class="panel-body chat" id="chat_return_alert" style="height: 85%">
         <div class="well scrollspy-chat-pane" data-offset="6" data-spy="scroll" id="return-alert"
-             data-target="#chat_pane">
+             data-target="#chat_pane" style="height: 90%">
+
         </div>
         <div class="col-md-3">
             <div class="btn-group">
@@ -16,18 +21,26 @@
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-paperclip"></span>
                 </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                </button>
             </div>
         </div>
         <div class="col-md-9">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="输入要发送的内容" id="sendInput">
+                <input type="text" class="form-control" placeholder="输入要发送的内容" id="sendInput"
+                       oninput="btnEventFn(this.value);" onpropertychange="btnEventFn(this.value)">
                     <span class="input-group-btn">
-                        <button class="btn btn-info" type="button" data-placement="left" title="发送"
-                                onclick="sendMsg(this)">
+                        <button id="sendMsgBtn" class="btn btn-default" type="button" data-placement="left" title="发送"
+                                disabled="true"
+                                onclick="sendMsg('嗨')">
                             <span class="pull-right glyphicon glyphicon-send cur send">&nbsp;</span>
                         </button>
                     </span>
             </div>
         </div>
+        </p>
+
     </div>
+    <!--stop chat window panel-->
 </div>

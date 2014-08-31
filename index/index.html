@@ -82,7 +82,7 @@
         <div class="panel-heading">
             <div class="panel-title"><strong>KeeeWeee</strong>
                 <span class="pull-right glyphicon glyphicon-cog cur menu"></span>
-                <span class="pull-right glyphicon glyphicon-edit cur menu">&nbsp;</span>
+                <span class="pull-right glyphicon glyphicon-edit cur menu" onclick="showChat();">&nbsp;</span>
                 <span class="pull-right glyphicon glyphicon-search cur menu">&nbsp;</span>
             </div>
         </div>
@@ -246,7 +246,7 @@
 
 <!--start chat window-->
 <div class="col-sm-6 col-md-6 mag-top" id="chat_float_pane">
-    <div class="panel panel-info opacity">
+    <div class="panel panel-info opacity" id="chat_container" style="height: 90% ">
         <!--start chat window title-->
         <div class="panel-heading txt">
             与 Vivi Young 交谈中

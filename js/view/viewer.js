@@ -47,9 +47,12 @@ function closeChat() {
 }
 
 function showChat() {
+//    $("#chat_float_pane").attr("style","height:900px")
+    heightFn("chat_float_pane", 1.0);
+    var h = $("#return-alert").attr("style")
     $("#chat_float_pane").empty();
     $("#chat_float_pane").load("modules/chatpane.html");
-    heightFn("return-alert", 0.6745);
+    $("#return-alert").attr("style", h)
 //    heightFn("return-alert", 0.6745);
 }
 
@@ -189,4 +192,4 @@ function btnEventFn(value) {
         $("#sendMsgBtn").attr("disabled", true)
         $("#sendMsgBtn").attr("class", "btn-default btn")
     }
-}   
+}
