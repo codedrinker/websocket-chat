@@ -106,8 +106,8 @@ function contactsListViewer(id, name, head) {
     if (snsType(id) == TencentWeiboUser)
         head = head + "/180"
     $("#contact_list").prepend("<li id='" + id + "  style='position:relative' sdata-toggle='modal' data-target='#profile_details' onclick='chatWith('" + id + "','" + name + "')' class='list-group-item'>" +
-        "<img id='" + id + ":img" + "' onmouseover='showSocialIcons(this)'  onmouseout='hiddenSocialIcons(this)'  src='" + head + "' class='img-circle visref'>" +
-        "<img style='margin-top: 19px;margin-left: 0px;position:absolute;left:32px;bottom:5px;' src='http://s3-ap-southeast-1.amazonaws.com/keeeweee.asset/sns/" + snsType(id) + ".png)' height='16px' width='16px'>" +
+        "<img id='" + id + ":img" + "' src='" + head + "' class='img-circle visref'>" +
+        "<img style='margin-top: 19px;margin-left: 0px;position:absolute;left:38px;bottom:10px;' src='http://s3-ap-southeast-1.amazonaws.com/keeeweee.asset/sns/" + snsType(id) + ".png' height='15px' width='15px'>" +
         "&nbsp;&nbsp;" + name + "</li>")
 }
 
@@ -189,4 +189,4 @@ function btnEventFn(value) {
         $("#sendMsgBtn").attr("disabled", true)
         $("#sendMsgBtn").attr("class", "btn-default btn")
     }
-}
+}   
