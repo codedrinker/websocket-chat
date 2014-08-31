@@ -146,7 +146,8 @@ function momentsListViewer(user_id, user_name, user_head, moments_id, moments_ty
 
 
 function logout() {
-    window.location.href("login.html");
+    alert("您的账号在其他地方登陆");
+    window.location.href = "login.html";
 }
 
 function showSocialIcons(e) {
@@ -208,9 +209,11 @@ function sendThenClear() {
     var chatPaneId = "#return-alert"
     var accounttId = $(chatPaneId).attr("accounttId");
     var accountHead = $(chatPaneId).attr("accountHead");
+    var chatId = $(chatPaneId).attr("chat_id");
     var content = $("#sendInput").val();
+    $("#sendInput").focus();
     sendMsg(content)
-    wsp.chatSendMessage(accounttId, content, 0, "se:i:1404796754~m:8618610611153");
+    wsp.chatSendMessage(accounttId, content, 0, chatId);
     $("#sendMsgBtn").attr("disabled", true);
     $("#sendMsgBtn").attr("class", "btn-default btn");
     $("#sendInput").val("");

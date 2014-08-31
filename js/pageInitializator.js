@@ -78,11 +78,14 @@ function layoutInitializator() {
 
     /*  polling();*/
 }
-function onkeydown(){             //网页内按下回车触发
-    if(event.keyCode==13)
-    {
+function onkeydown() {             //网页内按下回车触发
+    if (event.keyCode == 13) {
         document.getElementById("Button").click();
         return false;
     }
+}
+
+function settingIniter() {
+    wsp.settingOption("chatMsgOption", "on", "chatMsgOption")
 }
 

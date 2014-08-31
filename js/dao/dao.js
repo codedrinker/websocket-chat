@@ -172,6 +172,7 @@ function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
     var websocket = (new WebSocket(url));
     var ws = websocket;
     websocket.onopen = function (evt) {
+        log(evt.data);
         var endShakingTime = (new Date());
         log("服务器连接成功 " + endShakingTime.format("yyyy-MM-dd hh:mm:ss.S"));
         if (onopen) {
@@ -199,6 +200,7 @@ function makeWSProxy(url, onmsg, onopen, onclose, onerror) {
             }
         } else {
             onmsg(evt);
+            log(evt.data);
         }
 
     };
