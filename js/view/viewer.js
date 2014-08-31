@@ -46,14 +46,21 @@ function closeChat() {
     $("#chat_float_pane").empty();
 }
 
-function showChat() {
-//    $("#chat_float_pane").attr("style","height:900px")
-    heightFn("chat_float_pane", 1.0);
-    var h = $("#return-alert").attr("style")
-    $("#chat_float_pane").empty();
-    $("#chat_float_pane").load("modules/chatpane.html");
-    $("#return-alert").attr("style", h)
-//    heightFn("return-alert", 0.6745);
+function showChat(e) {
+    var chatPaneId = "#return-alert"
+    $(chatPaneId).empty();
+    var chatWithName = $(e).attr("chat_with_name");
+    var chatWithId = $(e).attr("chat_with_id");
+    var account = $("#head_float_pane").children(0)
+    var accounttId = account.attr("id")
+    var accountHead = account.attr("src")
+    $("#chat_with_name").text(chatWithName)
+    $(chatPaneId).attr({
+        chat_with_id: chatWithId,
+        chat_with_name: chatWithName,
+        accounttId: accounttId,
+        accountHead: accountHead
+    });
 }
 
 function appendHtml(id, html) {
@@ -159,9 +166,6 @@ function logout() {
     window.location.href("login.html");
 }
 
-function chatWith(id, name) {
-    $("#chat_float_pane").load("modules/chat.html");
-}
 function showSocialIcons(e) {
     var this_id = $(e).attr("id");
     var src1 = $(e).attr("src");
@@ -192,4 +196,11 @@ function btnEventFn(value) {
         $("#sendMsgBtn").attr("disabled", true)
         $("#sendMsgBtn").attr("class", "btn-default btn")
     }
+}
+function sendThenClear() {
+    var content = $("#sendInput").val()
+    sendMsg(content)
+    $("#sendMsgBtn").attr("disabled", true)
+    $("#sendMsgBtn").attr("class", "btn-default btn")
+    $("#sendInput").val("")
 }

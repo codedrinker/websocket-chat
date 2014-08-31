@@ -249,7 +249,7 @@
     <div class="panel panel-info opacity" id="chat_container" style="height: 90% ">
         <!--start chat window title-->
         <div class="panel-heading txt">
-            与 Vivi Young 交谈中
+            与 <span id="chat_with_name"></span> 交谈中
             <span class="pull-right glyphicon glyphicon-off cur menu" onclick="closeChat();">&nbsp;</span>
             <span class="pull-left glyphicon glyphicon-trash cur menu" onclick="clearMsg();">&nbsp;</span>
             <!--<span class="pull-right glyphicon glyphicon-cog cur menu"></span>-->
@@ -325,7 +325,7 @@
                     <span class="input-group-btn">
                         <button id="sendMsgBtn" class="btn btn-default" type="button" data-placement="left" title="发送"
                                 disabled="true"
-                                onclick="sendMsg('嗨')">
+                                onclick="sendThenClear()" >
                             <span class="pull-right glyphicon glyphicon-send cur send">&nbsp;</span>
                         </button>
                     </span>
