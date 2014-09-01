@@ -32,9 +32,12 @@ function errorHander(json) {
         if (json.e["c"] == "205005")
             alert("缺啥参数")
         else if (err == "200002") {
-            logout();
-        }
+            if (window.confirm('您的账号已经再其他地方登陆,重新登陆?')) {
+                window.location.href = "index.html";
+            }
+        }else{
 
+        }
     }
 }
 function chatHandler(json) {
