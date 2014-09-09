@@ -204,6 +204,7 @@ function showChat(e) {
     var accounttId = $(e).attr("chat_account");
     var accountHead = $(e).attr("chat_account_head");
     $("#chat_with_name").text(chatWithName)
+    $("#sendInput").focus();
     $(chatPaneId).attr({
         chat_with_id: chatWithId,
         chat_with_name: chatWithName,
