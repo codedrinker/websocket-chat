@@ -11,20 +11,32 @@ function alert_msg(typz, content, msg) {
 }
 
 function sendMsg(msg) {
+    var chatPaneId = "#return-alert"
+    var accounttId = $(chatPaneId).attr("accounttId");
+    var accountHead = $(chatPaneId).attr("accountHead");
     var msg = $("#sendInput").val()
-    $("#return-alert").append("  <div class='col-md-12'>" +
-            "<div class='col-md-10 alert alert-info' role='alert'>" +
-            msg + "</div>" +
-            "<div class='col-md-2'>" +
-            "<img src='../image/headref.jpg' id='i:2' onmouseover='showSocialIcons(this)' " +
-            "onmouseout='hiddenSocialIcons(this)' class='img-circle chatref cur pull-right " +
-            "title='Primos'>" +
-            "</div></div>"
+    $("#return-alert").append(
+            "<div class='col-md-12'>" +
+            "   <div class='col-md-10 alert alert-info' role='alert'>" + msg + "</div>" +
+            "   <div class='col-md-2'>" +
+            "       <img src='" + accountHead + "' id='" + accounttId + "' onmouseover='showSocialIcons(this)' " + "onmouseout='hiddenSocialIcons(this)' class='img-circle chatref cur pull-right " + "title='Primos'>" +
+            "   </div>" +
+            "</div>"
     )
 }
 
-function replyMsg(msg) {
-    alert_msg("alert-info", "接收", msg)
+function replyMsg(contact) {
+    var chatPaneId = "#return-alert"
+    var headRef = $(chatPaneId).attr("chat_with_head");
+    var id = $(chatPaneId).attr("chat_with_id");
+    $(chatPaneId).append(
+            "<div class='col-md-12'>" +
+            "   <div class='col-md-2'>" +
+            "       <img src='" + headRef + "' id='" + id + "' onmouseover='showSocialIcons(this)' " + "onmouseout='hiddenSocialIcons(this)' class='img-circle chatref cur " + "title='Primos'>" +
+            "   </div>" +
+            "   <div class='col-md-10 alert alert-success' role='alert'>" + contact + "</div>" +
+            "</div>"
+    )
 }
 
 function warningMsg(msg) {
@@ -187,22 +199,26 @@ function showChat(e) {
     $(chatPaneId).empty();
     var chatWithName = $(e).attr("chat_with_name");
     var chatWithId = $(e).attr("chat_with_id");
-    var account = $("#head_float_pane").children(0)
-    var accounttId = account.attr("id")
-    var accountHead = account.attr("src")
+    var chatId = $(e).attr("chat_id");
+    var chatWithHead = $(e).attr("chat_with_head");
+    var accounttId = $(e).attr("chat_account");
+    var accountHead = $(e).attr("chat_account_head");
     $("#chat_with_name").text(chatWithName)
     $(chatPaneId).attr({
         chat_with_id: chatWithId,
         chat_with_name: chatWithName,
         accounttId: accounttId,
-        accountHead: accountHead
+        accountHead: accountHead,
+        chat_id: chatId,
+        chat_with_head: chatWithHead
     });
-    wsp.createChatSession(accounttId, [
-        {
-            "p0o": accounttId,
-            "p1f": [chatWithId]
-        }
-    ], "点击会话")
+    localStorage.chatId = chatId
+    /*wsp.createChatSession(accounttId, [
+     {
+     "p0o": accounttId,
+     "p1f": [chatWithId]
+     }
+     ], "点击会话")*/
 }
 
 function sendThenClear() {

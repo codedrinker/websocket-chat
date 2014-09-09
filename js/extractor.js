@@ -35,7 +35,7 @@ function errorHander(json) {
             if (window.confirm('您的账号已经再其他地方登陆,重新登陆?')) {
                 window.location.href = "index.html";
             }
-        }else{
+        } else {
 
         }
     }
@@ -44,9 +44,13 @@ function chatHandler(json) {
     if (json.h["p1"] == "create") {
         var chatId = json.r["chatId"]
         var chatPaneId = "#return-alert"
-        $(chatPaneId).attr({
-            chat_id: chatId
-        });
+        if (localStorage.chatId == chatId) {
+
+        } else {
+        }
+        /*$(chatPaneId).attr({
+         chat_id: chatId
+         });*/
     } else {
     }
 }
@@ -94,7 +98,42 @@ function settingHandler(json) {
 
 function pushHandler(json) {
     if (json.h["s"] == "chatMsg.online") {
-        alert(json.info)
-    } else {
+        /**
+         *
+         "h": {
+            "s": "chatMsg.online"
+          },
+         "info": [
+         {
+            "t": 1410281067970,
+            "u": [
+                "i:1404796754"
+            ],
+            "m": {
+                "t": 0,
+                "c": "然后呢。。"
+            },
+            "g": 0,
+            "h": "se:i:1404796754~s:1971789097",
+            "r": "s:1971789097"
+        }
+         ]
+         }
+         */
+        var messages = json.info
+        log(messages)
+        for (var index in messages) {
+            if (messages[index].h == localStorage.chatId) {
+                if (messages[index].m.t == 0) {
+                    replyMsg(messages[index].m.c)
+                } else {
+
+                }
+
+            } else {
+            }
+        }
+    }
+    else {
     }
 }

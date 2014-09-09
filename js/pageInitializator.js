@@ -23,7 +23,9 @@ function margin_top(id, pier) {
 
 
 function backgroundFn() {
-    $("body").css("background-image", "url('../image/res/11.jpg')");
+    var index = 11
+    if (localStorage.localImg) index = localStorage.localImg
+    $("body").css("background-image", "url('../image/res/" + index + ".jpg')");
 }
 
 /*function pollingForward() {
@@ -44,6 +46,7 @@ function pollingForward() {
     var index = (parseInt(image.substring(image.indexOf(".") - 2).substring(0, 2)) + 1)
     if (index >= 26) index = 11
     log(index)
+    localStorage.localImg = index
     $("body").css("background-image", "url('../image/res/" + index + ".jpg')");
 }
 
@@ -52,6 +55,7 @@ function pollingBack() {
     var index = ( parseInt(image.substring(image.indexOf(".") - 2).substring(0, 2)) - 1)
     if (index <= 10) index = 25
     log(index)
+    localStorage.localImg = index
     $("body").css("background-image", "url('../image/res/" + index + ".jpg')");
 }
 
