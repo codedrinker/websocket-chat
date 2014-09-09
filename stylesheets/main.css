@@ -58,6 +58,13 @@ body {
     background: #fff;
 }
 
+.chatopacity {
+    -moz-opacity: 0.00; /* FF 3.5以下 */
+    opacity: 0.00; /* FF 3.5及以上 */
+    filter: alpha(opacity=00); /* IE6及以上 */
+    background: #fff;
+}
+
 .noopacity {
     background-color: transparent;
     color: #fff;
@@ -88,6 +95,7 @@ body {
 .mag-left_m {
     margin-left: 10px;
 }
-.iconContainer{
+
+.iconContainer {
     position: relative;
 }

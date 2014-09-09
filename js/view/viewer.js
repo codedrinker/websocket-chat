@@ -195,6 +195,7 @@ function btnEventFn(value) {
 }
 
 function showChat(e) {
+    $("#chat_float_pane").removeClass("chatopacity")
     var chatPaneId = "#return-alert"
     $(chatPaneId).empty();
     var chatWithName = $(e).attr("chat_with_name");
