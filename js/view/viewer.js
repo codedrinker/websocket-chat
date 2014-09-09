@@ -55,7 +55,7 @@ function clearMsg() {
 }
 
 function closeChat() {
-    $("#chat_float_pane").empty();
+    $("#chat_float_pane").addClass("chatopacity")
 }
 
 function appendHtml(id, html) {
