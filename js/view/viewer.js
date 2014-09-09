@@ -235,3 +235,19 @@ function sendThenClear() {
     $("#sendMsgBtn").attr("class", "btn-default btn");
     $("#sendInput").val("");
 }
+
+function keyEvent(e) {
+    var key
+    if (window.event) // IE
+    {
+        key = e.keyCode
+    }
+    else if (e.which) // Netscape/Firefox/Opera
+    {
+        key = e.which
+    }
+    log(key)
+    log(key == 13)
+    if (key == 13)
+        sendThenClear();
+}
