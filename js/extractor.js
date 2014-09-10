@@ -127,7 +127,7 @@ function pushHandler(json) {
                 if (messages[index].m.t == 0) {
                     replyMsg(messages[index].m.c)
                 } else {
-
+                    
                 }
 
             } else {

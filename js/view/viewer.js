@@ -147,6 +147,9 @@ function momentsListViewer(user_id, user_name, user_head, moments_id, moments_ty
         "                    " + moments_likes + " <strong>likes</strong> ," + moments_count + " <strong>comments</strong>" +
         "                    </div>" +
         "                    <div class='media-body pull-right'>" +
+        "                           <span class='glyphicon glyphicon-heart cur' style='color:grey;' onclick='like(this)'/>&nbsp;" +
+        "                           <span class='glyphicon glyphicon-heart' style='color:red; '/>&nbsp;"+
+        "                           <span class='glyphicon glyphicon-comment' style='color:grey;'></span>" +
         "                        <a href='#'><img id='" + moments_id + "-like" + "' status='0' class='liicon' src='../image/assets/hearts/0.png' title='赞' onclick='like(this)'></a>&nbsp;&nbsp;" +
         "                            <a href='#'><img id='" + moments_id + "-comment" + "' class='liicon' src='../image/assets/icon_comment_grey.png' title='评论'></a>" +
         "                            </div>" +
